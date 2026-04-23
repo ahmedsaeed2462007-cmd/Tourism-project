@@ -11,13 +11,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/CSS/index.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <ul class="navbar">
+            <div class="navbar">
                 <div class="dropdown">
                     <button class="dropbtn">
                         <!-- ده عبارة عن علامة الثلاثة شرط الهي الدروب داون منيو -->
@@ -48,32 +49,42 @@
                     <li><a href="">Sign Up</a></li>
                     <li><a href="">Account</a></li>
                 </div>
-            </ul>
+            </div>
         </nav>
     </header>
     <main>
-        <img src="/Material/Istanbul City.jpg" alt="" class="background_img">
-        <section>
-            <h1>Explore The World <span>Like Never Before</span></h1>
-            <p>Welcome To The Best Travelling Hub In The Middle-East: <span>Travella</span></p>
-            <img src="" alt="home-img-1">
-        </section>
-        <section>
-            <p>Discover The Beauty Of Travelling, Alone Or In Groups</p>
-            <img src="" alt="home-img-2">
-        </section>
-        <section>
-            <p>Explore Our Collection Of Highly Popular Sight-Seeing Destinations In The Middle-East</p>
-            <img src="" alt="home-img-3">
-        </section>
-        <section>
-            <p>Find Yourself In The Beauty Of Nature</p>
-            <img src="" alt="home-img-4">
-            <p>Are You Ready?<span> Join Us Now</span></p>
+        <img src="/Material/Istanbul City.jpg" alt="background_img" class="background_img">
+        <article class="art1">
+            <p class="description1">Welcome To The Best Travelling Hub In The Middle-East:
+                <span><strong>Travella</strong></span>
+            </p>
+        </article>
+        <article class="card-box">
+            <div>
+                <p class="description2">Travel Alone Or In Groups <br>Discover The Beauty Of Travelling Together</p>
+                <img src="/Material/group travelling.jpg" alt="friends travelling" class="home-img1">
+            </div>
+            <div>
+                <p class="description4">Comfort Is Our Top Priority <br> Luxurious Residence In Esteemed Hotels</p>
+                <img src="/Material/Hotel.jpg" alt="fancy hotel" class="home-img2">
+            </div>
+            <div>
+                <p class="description3">Explore Our Collection <br> Highly Popular Sight-Seeing Destinations</p>
+                <img src="/Material/pyramids.jpg" alt="pyramids view" class="home-img3">
+            </div>
+        </article>
+        <section class="home-end">
+            <p>Are You Ready?<a href=""> Join Us Now</a></p>
         </section>
     </main>
     <footer>
-        <p>&copy; Travella inc. 2026 All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="trademark">&copy; Travella inc. 2026 All Rights Reserved</p>
     </footer>
 </body>
 
