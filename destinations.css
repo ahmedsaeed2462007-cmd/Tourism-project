@@ -214,6 +214,7 @@ main .country .country-header h2:hover {
 main .country .distination {
     background-color: var(--color-green);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 40px;
     border-bottom-right-radius: 15px;
@@ -221,16 +222,21 @@ main .country .distination {
 }
 
 main .country .distination .card {
+    margin: 10px;
     padding: 20px 20px;
     background-color: var(--color-eclipse);
     border: 2px solid var(--color-earthydrift);
     box-shadow: 2px 2px 20px var(--color-eclipse);
     border-radius: 10px;
-    height: 550px;
+    /* height: 550px; */
+    flex-shrink: 1;
+    min-width: 280px;
 }
 
 main .country .distination .card img {
     width: 380px;
+    min-width: 280px;
+    flex-shrink: 1;
     height: 300px;
     border-radius: 15px;
     box-shadow: 2px 2px 10px var(--color-green);
@@ -318,4 +324,384 @@ footer .social-icons a {
 footer .social-icons a:hover {
     color: #ffffff;
     transform: translateY(-5px);
+}
+
+/* ========================================
+   Tablet Responsive Design (768px and below)
+   ======================================== */
+@media (max-width: 768px) {
+    
+    /* Header adjustments */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 20px;
+        gap: 10px;
+    }
+    
+    header .title {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    .navbar {
+        padding: 0;
+        gap: 5px;
+    }
+    
+    .navbar li {
+        margin: 0;
+    }
+    
+    .navbar li a {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+        border: 1.5px solid var(--color-almond);
+    }
+    
+    .visible_links {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    
+    .visible_links li a {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+    
+    .dropbtn {
+        padding: 10px;
+    }
+    
+    .dropbtn svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .dropdown_content {
+        min-width: 180px;
+        transform: translateX(-10%);
+    }
+    
+    .dropdown_content a {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+    
+    /* Main content adjustments */
+    main .country {
+        margin: 15px;
+    }
+    
+    main .country .country-header {
+        height: 300px;
+    }
+    
+    main .country .country-header h2 {
+        font-size: 22px;
+        width: auto;
+        padding: 8px 15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    main .country .distination {
+        padding: 25px 20px;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    main .country .distination .card {
+        min-width: 100%;
+        max-width: 400px;
+        margin: 0;
+    }
+    
+    main .country .distination .card img {
+        width: 100%;
+        height: 250px;
+        max-width: 100%;
+    }
+    
+    main .country .distination .card .info {
+        line-height: 25px;
+    }
+    
+    main .country .distination .card .info h2 {
+        font-size: 1.1rem;
+    }
+    
+    main .country .distination .card .info h3 {
+        font-size: 0.95rem;
+    }
+    
+    main .country .distination .card .btn button {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    
+    /* Footer adjustments */
+    footer {
+        font-size: 14px;
+        padding: 20px 10px;
+        gap: 12px;
+    }
+    
+    footer .social-icons {
+        gap: 20px;
+    }
+    
+    footer .social-icons a {
+        font-size: 1.4rem;
+    }
+}
+
+/* ========================================
+   Mobile Responsive Design (480px and below)
+   ======================================== */
+@media (max-width: 480px) {
+    
+    /* General adjustments */
+    body {
+        font-size: 14px;
+    }
+    
+    /* Header for mobile */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    header .title {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    .navbar {
+        padding: 0;
+        gap: 3px;
+        flex-wrap: wrap;
+    }
+    
+    .navbar li {
+        margin: 0;
+    }
+    
+    .navbar li a {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+        border: 1px solid var(--color-almond);
+    }
+    
+    .visible_links {
+        width: 100%;
+        gap: 5px;
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+    
+    .visible_links li a {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+        border: 1px solid var(--color-almond);
+    }
+    
+    .dropbtn {
+        padding: 8px;
+    }
+    
+    .dropbtn svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .dropdown_content {
+        min-width: 130px;
+        transform: translateX(-15%);
+    }
+    
+    .dropdown_content a {
+        font-size: 0.75rem;
+        padding: 8px 10px;
+    }
+    
+    /* Main content for mobile */
+    main .country {
+        margin: 10px 8px;
+        border: 3px solid var(--color-earthydrift);
+    }
+    
+    main .country .country-header {
+        height: 220px;
+    }
+    
+    main .country .country-header h2 {
+        font-size: 18px;
+        width: auto;
+        padding: 6px 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 3%;
+    }
+    
+    main .country .country-header h2:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+    
+    main .country .distination {
+        padding: 15px 12px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    main .country .distination .card {
+        min-width: 100%;
+        max-width: 100%;
+        margin: 8px 0;
+        padding: 15px;
+        flex-shrink: 0;
+    }
+    
+    main .country .distination .card .pic {
+        width: 100%;
+    }
+    
+    main .country .distination .card img {
+        width: 100%;
+        height: 200px;
+        max-width: 100%;
+    }
+    
+    main .country .distination .card .info {
+        line-height: 20px;
+        margin: 8px 0;
+    }
+    
+    main .country .distination .card .info h2 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+    
+    main .country .distination .card .info h3 {
+        font-size: 0.85rem;
+        margin: 6px 0;
+    }
+    
+    main .country .distination .card .info ul {
+        padding-left: 15px;
+        font-size: 0.8rem;
+    }
+    
+    main .country .distination .card .info li {
+        margin: 4px 0;
+    }
+    
+    main .country .distination .card .btn {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        height: auto;
+        margin-top: 12px;
+    }
+    
+    main .country .distination .card .btn button {
+        font-size: 13px;
+        padding: 8px 10px;
+        border: 1.5px solid var(--color-earthydrift);
+    }
+    
+    main .country .distination .card:hover {
+        transform: scale(1.02);
+    }
+    
+    main .country .distination .card .btn button:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Footer for mobile */
+    footer {
+        font-size: 12px;
+        padding: 12px 8px;
+        gap: 10px;
+    }
+    
+    footer .social-icons {
+        gap: 15px;
+        padding: 8px 0;
+    }
+    
+    footer .social-icons a {
+        font-size: 1.2rem;
+    }
+    
+    footer .trademark {
+        font-size: 11px;
+    }
+}
+
+/* ========================================
+   Extra Small Mobile (320px and below)
+   ======================================== */
+@media (max-width: 320px) {
+    
+    header {
+        padding: 8px 10px;
+        gap: 6px;
+    }
+    
+    header .title {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .navbar li a {
+        font-size: 0.65rem;
+        padding: 5px 6px;
+    }
+    
+    .visible_links li a {
+        font-size: 0.65rem;
+        padding: 5px 6px;
+    }
+    
+    .dropbtn svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    main .country .country-header h2 {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    
+    main .country .distination .card {
+        padding: 10px;
+    }
+    
+    main .country .distination .card img {
+        height: 150px;
+    }
+    
+    main .country .distination .card .info h2 {
+        font-size: 0.9rem;
+    }
+    
+    main .country .distination .card .info h3 {
+        font-size: 0.75rem;
+    }
+    
+    main .country .distination .card .btn button {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
 }
