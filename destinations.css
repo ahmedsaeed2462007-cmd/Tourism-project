@@ -228,7 +228,6 @@ main .country .distination .card {
     border: 2px solid var(--color-earthydrift);
     box-shadow: 2px 2px 20px var(--color-eclipse);
     border-radius: 10px;
-    /* height: 550px; */
     flex-shrink: 1;
     min-width: 280px;
 }
@@ -326,9 +325,7 @@ footer .social-icons a:hover {
     transform: translateY(-5px);
 }
 
-/* ========================================
-   Tablet Responsive Design (768px and below)
-   ======================================== */
+
 @media (max-width: 768px) {
     
     /* Header adjustments */
@@ -392,7 +389,7 @@ footer .social-icons a:hover {
         padding: 10px 12px;
     }
     
-    /* Main content adjustments */
+    /* Main content */
     main .country {
         margin: 15px;
     }
@@ -460,9 +457,6 @@ footer .social-icons a:hover {
     }
 }
 
-/* ========================================
-   Mobile Responsive Design (480px and below)
-   ======================================== */
 @media (max-width: 480px) {
     
     /* General adjustments */
@@ -470,7 +464,7 @@ footer .social-icons a:hover {
         font-size: 14px;
     }
     
-    /* Header for mobile */
+    /* Header */
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -536,7 +530,7 @@ footer .social-icons a:hover {
         padding: 8px 10px;
     }
     
-    /* Main content for mobile */
+    /* Main content */
     main .country {
         margin: 10px 8px;
         border: 3px solid var(--color-earthydrift);
@@ -646,62 +640,5 @@ footer .social-icons a:hover {
     
     footer .trademark {
         font-size: 11px;
-    }
-}
-
-/* ========================================
-   Extra Small Mobile (320px and below)
-   ======================================== */
-@media (max-width: 320px) {
-    
-    header {
-        padding: 8px 10px;
-        gap: 6px;
-    }
-    
-    header .title {
-        font-size: 1rem;
-        letter-spacing: 0.5px;
-    }
-    
-    .navbar li a {
-        font-size: 0.65rem;
-        padding: 5px 6px;
-    }
-    
-    .visible_links li a {
-        font-size: 0.65rem;
-        padding: 5px 6px;
-    }
-    
-    .dropbtn svg {
-        width: 18px;
-        height: 18px;
-    }
-    
-    main .country .country-header h2 {
-        font-size: 14px;
-        padding: 4px 8px;
-    }
-    
-    main .country .distination .card {
-        padding: 10px;
-    }
-    
-    main .country .distination .card img {
-        height: 150px;
-    }
-    
-    main .country .distination .card .info h2 {
-        font-size: 0.9rem;
-    }
-    
-    main .country .distination .card .info h3 {
-        font-size: 0.75rem;
-    }
-    
-    main .country .distination .card .btn button {
-        font-size: 11px;
-        padding: 6px 8px;
     }
 }
