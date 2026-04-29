@@ -1,1 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* variable names for different colors */
+/* to choose a color write: "color: var(--color-almond)" */
+:root {
+    --color-almond: #D6BD98;
+    --color-matchabrew: #677D6A;
+    --color-forestroast: #40534C;
+    --color-eclipse: #1A3636;
+    --color-timberbreeze: #4C2B12;
+    --color-forestfloor: #7F5235;
+    --color-earthydrift: #BB8954;
+    --color-fernwhisper: #F5F5D3;
+    --color-canopygreen: #798262;
+    --color-deepwood: #33352C;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #1A3636;
+    padding: 15px 40px;
+    margin-bottom: 0px;
+    border-bottom: 4px solid var(--color-almond);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* حددت خط اللوجو وحجمه وشكله */
+header .title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.3rem;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    color: var(--color-almond);
+}
+
+/* عشان النافبار يملأ الصفحة */
+nav {
+    width: 100%;
+}
+
+/* شوية خصائص عادية */
+.navbar {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    padding: 0 30px;
+    margin: 0;
+}
+
+
+.visible_links {
+    margin-left: auto;
+    display: flex;
+    margin-right: 25px;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
+.navbar li a {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--color-almond);
+    padding: 10px;
+    border: 2px solid var(--color-almond);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* الهوفر ايفكتس */
+.navbar li a:hover,
+.navbar li a:focus {
+    background-color: var(--color-forestfloor);
+    color: white;
+}
+
+/* زرار الدروب داون منيو */
+.dropbtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-almond);
+    cursor: pointer;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dropbtn:hover {
+    color: #ffffff;
+}
+
+/* ضرورية عشان يشتغل */
+.dropdown {
+    position: relative;
+}
+
+/* الدروب داون منيو نفسها */
+.dropdown_content {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    /* ضرورية عشان المنيو تظهر كويس */
+    position: absolute;
+    /* النسب دي مهمة جدا عشان تشتغل كويس */
+    top: 100%;
+    left: 0%;
+    /* عشان اظبط المكان الي هيظهر فيه */
+    transform: translateX(-6%);
+    /* حجمه على الشاشة */
+    min-width: 250px;
+    padding: 15px 0;
+    border-radius: 0 0 12px 12px;
+    background-color: var(--color-eclipse);
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+    /* ال زد دي هتخليه يظهر فوق اي حاجة عالصفحة */
+    z-index: 1;
+    /* هيبقى مخفي لحد ما نعمل هوفر */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* اللينكات جوا الدروب داون منيو */
+.dropdown_content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 15px 10px 0px 0px;
+}
+
+.dropdown:hover .dropdown_content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* كل ما يخص الفوتر */
+footer {
+    background-color: #1A3636;
+    border-top: 4px solid var(--color-almond);
+    margin-top: auto;
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*                     Home Page                    */
+/* ----------------------------------------------- */
+main {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* tablet responsive design. */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    header .title {
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .navbar {
+        gap: 5px;
+    }
+
+    .navbar li {
+        margin: 0;
+    }
+
+    .navbar li a {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    .visible_links {
+        margin-right: 0;
+        gap: 8px;
+    }
+
+    .visible_links li a {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .dropbtn {
+        padding: 10px;
+    }
+
+    .dropbtn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dropdown_content {
+        top: 100%;
+        left: 0;
+        transform: translateX(-6%);
+        min-width: 165px;
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+    }
+
+    .dropdown_content li {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .dropdown_content a {
+        margin: 0px 7px 0px 0px;
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 15px 10px;
+    }
+}
+
+/* mobile responsive design */
+@media (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+        padding: 12px 15px;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    header .title {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+
+    .navbar {
+        position: relative;
+        padding: 0;
+        gap: 3px;
+    }
+
+    .navbar li {
+        margin: 0;
+    }
+
+    .navbar li a {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+        border: 1px solid var(--color-almond);
+    }
+
+    .visible_links {
+        gap: 5px;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+    }
+
+    .visible_links li a {
+        font-size: 0.55rem;
+        padding: 6px 8px;
+        border: 1px solid var(--color-almond);
+    }
+
+    .dropdown_content {
+        top: 100%;
+        left: 0;
+        transform: translateX(-7%);
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+    }
+
+    .dropbtn {
+        padding: 6px;
+    }
+
+    .dropbtn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .dropdown_content {
+        min-width: 110px;
+    }
+
+    .dropdown_content li {
+        padding: 4px 10px;
+    }
+
+    footer {
+        font-size: 0.75rem;
+        padding: 10px 8px;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20240801/pngtree-beautiful-mountain-landscape-image_15938313.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h-form {
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 5%;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.h-form h1 {
+    color: #09571b;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+input,
+select {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 2px solid #e0e0e0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+input::placeholder {
+    color: #757575;
+}
+
+input:hover,
+select:hover {
+    border: 2px solid #b0bbc1;
+}
+
+input:focus,
+select:focus {
+    border: 2px solid #16d116;
+    box-shadow: 0 0 8px rgba(68, 176, 11, 0.2);
+}
+
+label {
+    font-size: 18px;
+    color: rgb(125, 195, 20);
+    font-weight: 550;
+    margin-bottom: 8px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+form button {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #44b00b;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+}
+
+form button:hover {
+    background-color: #128221;
+}
+
+.allicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #081C0B;
+    width: 100%;
+    height: 250px;
+    gap: 20px;
+}
+
+.allicon label {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.icon1:hover,
+.icon2:hover,
+.icon3:hover,
+.icon4:hover {
+    transform: rotate(0deg) scale(1.1);
+}
+
+.icon1 {
+    background-image: linear-gradient(to bottom, #4267B2, #1877F2);
+    padding: 20px;
+    border-radius: 20px;
+    transform: rotate(-40deg);
+    transition: 0.4s;
+}
+
+.icon1:hover {
+    background-image: linear-gradient(to bottom, #5789ee, #006eff);
+}
+
+.icon2 {
+    background-image: linear-gradient(to bottom, #25D366, #1EBE5A);
+    padding: 20px;
+    border-radius: 20px;
+    transform: rotate(-40deg);
+    transition: 0.4s;
+}
+
+.icon2:hover {
+    background-image: linear-gradient(to bottom, #12ff69, #1EBE5A);
+}
+
+.icon3 {
+    background-image: linear-gradient(to bottom, #252627, #000000);
+    padding: 20px;
+    border-radius: 20px;
+    transform: rotate(-40deg);
+    transition: 0.4s;
+}
+
+.icon3:hover {
+    background-image: linear-gradient(to bottom, #505152, #000000);
+}
+
+.icon4 {
+    background-image: linear-gradient(45deg, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    padding: 20px;
+    border-radius: 20px;
+    transform: rotate(-40deg);
+    transition: 0.5s;
+}
+
+.icon4:hover {
+    background-image: linear-gradient(45deg, #faf081 0%, #fdf176 5%, #fb4332 45%, #f625b4 60%, #164ffa 90%);
+}
+
+.allicon label {
+    color: white;
+}
+
+i {
+    margin-right: 15px;
+}
+
+@media(max-width:800px) {
+    .allicon {
+        display: flex;
+        flex-wrap: wrap;
+        height: 500px;
+        gap: 20px;
+    }
+
+}
+
+@media(max-width:400px) {
+    .allicon {
+        height: 1000px;
+    }
+}
