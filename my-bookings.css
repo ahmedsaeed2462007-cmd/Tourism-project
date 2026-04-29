@@ -1,1 +1,422 @@
+/*                  General Styles                  */
+/* ----------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* variable names for different colors */
+/* to choose a color write: "color: var(--color-almond)" */
+:root {
+    --color-almond: #D6BD98;
+    --color-matchabrew: #677D6A;
+    --color-forestroast: #40534C;
+    --color-eclipse: #1A3636;
+    --color-timberbreeze: #4C2B12;
+    --color-forestfloor: #7F5235;
+    --color-earthydrift: #BB8954;
+    --color-fernwhisper: #F5F5D3;
+    --color-canopygreen: #798262;
+    --color-deepwood: #33352C;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* محتوى الصفحة مترتب فوق بعضه */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--color-almond);
+    background-color: var(--color-deepwood);
+}
+
+/* can be removed in other pages */
+.background_img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(0px);
+}
+
+/* خلي عناصر الهيدر مترتبة ومتوسطة الصفحة */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #1A3636;
+    padding: 15px 40px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--color-almond);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* حددت خط اللوجو وحجمه وشكله */
+header .title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.3rem;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+/* عشان النافبار يملأ الصفحة */
+nav {
+    width: 100%;
+}
+
+/* شوية خصائص عادية */
+.navbar {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    padding: 0 30px;
+    margin: 0;
+}
+
+
+.visible_links {
+    margin-left: auto;
+    display: flex;
+    margin-right: 25px;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
+.navbar li a {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--color-almond);
+    padding: 10px;
+    border: 2px solid var(--color-almond);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* الهوفر ايفكتس */
+.navbar li a:hover,
+.navbar li a:focus {
+    background-color: var(--color-forestfloor);
+    color: white;
+}
+
+/* زرار الدروب داون منيو */
+.dropbtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-almond);
+    cursor: pointer;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dropbtn:hover {
+    color: #ffffff;
+}
+
+/* ضرورية عشان يشتغل */
+.dropdown {
+    position: relative;
+}
+
+/* الدروب داون منيو نفسها */
+.dropdown_content {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    /* ضرورية عشان المنيو تظهر كويس */
+    position: absolute;
+    /* النسب دي مهمة جدا عشان تشتغل كويس */
+    top: 100%;
+    left: 0%;
+    /* عشان اظبط المكان الي هيظهر فيه */
+    transform: translateX(-6%);
+    /* حجمه على الشاشة */
+    min-width: 250px;
+    padding: 15px 0;
+    border-radius: 0 0 12px 12px;
+    background-color: var(--color-eclipse);
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+    /* ال زد دي هتخليه يظهر فوق اي حاجة عالصفحة */
+    z-index: 1;
+    /* هيبقى مخفي لحد ما نعمل هوفر */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* اللينكات جوا الدروب داون منيو */
+.dropdown_content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 15px 10px 0px 0px;
+}
+
+.dropdown:hover .dropdown_content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* كل ما يخص الفوتر */
+footer {
+    background-color: #1A3636;
+    border-top: 4px solid var(--color-almond);
+    margin-top: auto;
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*                     Home Page                    */
+/* ----------------------------------------------- */
+main {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* tablet responsive design. */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    header .title {
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .navbar {
+        gap: 5px;
+    }
+
+    .navbar li {
+        margin: 0;
+    }
+
+    .navbar li a {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    .visible_links {
+        margin-right: 0;
+        gap: 8px;
+    }
+
+    .visible_links li a {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .dropbtn {
+        padding: 10px;
+    }
+
+    .dropbtn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dropdown_content {
+        top: 100%;
+        left: 0;
+        transform: translateX(-6%);
+        min-width: 165px;
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+    }
+
+    .dropdown_content li {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .dropdown_content a {
+        margin: 0px 7px 0px 0px;
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 15px 10px;
+    }
+}
+
+/* mobile responsive design */
+@media (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+        padding: 12px 15px;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    header .title {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+
+    .navbar {
+        position: relative;
+        padding: 0;
+        gap: 3px;
+    }
+
+    .navbar li {
+        margin: 0;
+    }
+
+    .navbar li a {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+        border: 1px solid var(--color-almond);
+    }
+
+    .visible_links {
+        gap: 5px;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+    }
+
+    .visible_links li a {
+        font-size: 0.55rem;
+        padding: 6px 8px;
+        border: 1px solid var(--color-almond);
+    }
+
+    .dropdown_content {
+        top: 100%;
+        left: 0;
+        transform: translateX(-7%);
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+    }
+
+    .dropbtn {
+        padding: 6px;
+    }
+
+    .dropbtn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .dropdown_content {
+        min-width: 110px;
+    }
+
+    .dropdown_content li {
+        padding: 4px 10px;
+    }
+
+    footer {
+        font-size: 0.75rem;
+        padding: 10px 8px;
+    }
+}
+
+/* table*/
+table td {
+    text-align: center;
+}
+
+table tbody tr td .upd {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+table tbody tr td .upd:hover {
+    background-color: rgb(14, 186, 14);
+    transform: scale(1.1);
+}
+
+table tbody tr td .del {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+
+table tbody tr td .del:hover {
+    background-color: rgb(197, 34, 34);
+    transform: scale(1.1);
+}
+.DELETEALL{
+    width: 100%;
+    height: 30px;
+}
+.delall{
+    margin:auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    background-color: rgb(136, 31, 31);
+    transition: 0.5s;
+}
+.delall:hover{
+    background-color: rgb(186, 46, 46);
+    transform: scale(1.1);
+}
