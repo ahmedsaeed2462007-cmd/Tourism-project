@@ -5,8 +5,6 @@ let go = document.getElementById('go');
 let returne = document.getElementById('return');
 let submit = document.getElementById('submit');
 let DELETEALL = document.getElementById('DELETEALL');
-let tmp;
-let mood = 'create';
 //لتخزين البيانات
 let array;
 if (localStorage.getItem('stor') != null) {
@@ -15,33 +13,27 @@ if (localStorage.getItem('stor') != null) {
 else {
     array = [];
 }
-
-submit.onclick = function () {
-    if (name.value != '' && phone.value != '') {
-        let object = {
-            name: name.value,
-            phone: phone.value,
-            destination: destination.value,
-            go: go.value,
-            returne: returne.value
-        }
-        if (mood === 'create') {
+if (submit) {
+    submit.onclick = function () {
+        if (name.value != '' && phone.value != '') {
+            let object = {
+                name: name.value,
+                phone: phone.value,
+                destination: destination.value,
+                go: go.value,
+                returne: returne.value
+            }
             array.push(object);
+            localStorage.setItem('stor', JSON.stringify(array));
+            window.alert("تم الحجز بنجاح");
+            clear();
+            showData();
+        } else {
+            window.alert("يرجي ادخال الاسم ورقم الهاتف علي الاقل");
         }
-        else {
-            array[tmp] = object;
-            mood = 'create';
-            submit.innerHTML = 'Submit';
-        }
-        localStorage.setItem('stor', JSON.stringify(array));
-        clear();
-        showData();
-        window.alert("تم الحجز بنجاح");
-    }
-    else {
-        window.alert("يرجي ادخال الاسم ورقم الهاتف علي الاقل");
     }
 }
+
 
 function clear() {
     name.value = '';
@@ -52,6 +44,7 @@ function clear() {
 }
 //عرض المدخلات
 function showData() {
+    if (!tbody) returne;
     let table = '';
     for (let i = 0; i < array.length; i++) {
         {
@@ -63,7 +56,7 @@ function showData() {
                 <td>${array[i].destination}</td>
                 <td>${array[i].go}</td>
                 <td>${array[i].returne}</td>
-                <td><button class="upd" onclick="updateData(${i})">Update</button></td>
+                <td><button class="upd">Update</button></td>
                 <td><button class="del" onclick="deleteData(${i})">Delete</button></td>
             </tr>
         `};
@@ -71,7 +64,7 @@ function showData() {
     document.getElementById('tbody').innerHTML = table;
     if (array.length > 0) {
         DELETEALL.innerHTML = `
-            <button class=delall onclick="deleteAllData() ">Delete All (${array.length})</button>
+            <button class=delall onclick="deleteAllData()">Delete All (${array.length})</button>
             `;
     }
     else {
@@ -91,20 +84,3 @@ function deleteAllData() {
     localStorage.clear();
     showData();
 }
-// دالة التعديل
-function updateData(i) {
-    name.value = array[i].name;
-    phone.value = array[i].phone;
-    destination.value = array[i].destination;
-    go.value = array[i].go;
-    returne.value = array[i].returne;
-    
-    submit.innerHTML = 'Update';
-    mood = 'update';
-    tmp = i; // تخزين مكان العنصر لتعديله لاحقاً
-    scroll({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
