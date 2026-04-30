@@ -11,7 +11,7 @@
 :root {
     --color-almond: #D6BD98;
     --color-matchabrew: #677D6A;
-    --color-forestroast: #40534C;
+    --color-forestroast: #399775;
     --color-eclipse: #1A3636;
     --color-timberbreeze: #4C2B12;
     --color-forestfloor: #7F5235;
@@ -97,7 +97,7 @@ nav {
 /* الهوفر ايفكتس */
 .navbar li a:hover,
 .navbar li a:focus {
-    background-color: var(--color-forestfloor);
+    background-color: var(--color-forestroast);
     color: white;
 }
 
@@ -403,10 +403,10 @@ main {
 }
 
 .h-form {
-   background: rgba(255, 255, 255, 0.95); 
+    background: rgba(255, 255, 255, 0.95);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     margin: 5%;
 }
 
