@@ -19,7 +19,7 @@
 <body>
     <header>
         <nav>
-            <div class="navbar">
+            <ul class="navbar">
                 <div class="dropdown">
                     <button class="dropbtn">
                         <!-- ده عبارة عن علامة الثلاثة شرط الهي الدروب داون منيو -->
@@ -34,10 +34,9 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="destinations.html">Destinations</a></li>
                         <li><a href="book-a-toor.html">Book A Tour</a></li>
-                        <li><a href="my-bookings.html">My Bookings</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact_us.html">Contact Us</a></li>
-                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="">About Us</a></li>
                     </div>
                 </div>
                 <!-- اللوجو بتاع الموقع -->
@@ -46,11 +45,11 @@
                 </li>
                 <!-- اللينكات الي مش هتدخل في الدروب داون -->
                 <div class="visible_links">
-                    <li><a href="log_in.html">Log In</a></li>
-                    <li><a href="sign_up.html">Sign Up</a></li>
-                    <li><a href="account.html">Account</a></li>
+                    <li><a href="log-in.html">Log In</a></li>
+                    <li><a href="sign-up.html">Sign Up</a></li>
+                    <li><a href="">Account</a></li>
                 </div>
-            </div>
+            </ul>
         </nav>
     </header>
     <div class="content">
@@ -58,8 +57,8 @@
             <h1 style="color:#032030">Discover the beauty of the world with us</h1>
             <form>
                 <input required placeholder="Full Name" name="name" type="text" id="name">
-                <input required placeholder="Email Address" name="Email" type="email">
-                <input required placeholder="Phone Number" name="Phone" type="tel" id="phone">
+                <input required placeholder="Email Address" name="Email" type="email" id="email">
+                <input required placeholder="Phone Number" name="Phone" type="tel" id="phone" maxlength="11">
                 <label for="destination">Destination</label>
                 <select id="destination">
                     <option value="Pyramids of Giza">Pyramids of Giza</option>
@@ -86,6 +85,26 @@
                 <button id="submit">Book now</button>
             </form>
         </div>
+    </div>
+    <div class="table">
+        <div id="DELETEALL"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Destination</th>
+                    <th>Go</th>
+                    <th>Return</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
     </div>
     <footer>
         <div class="social-icons">
