@@ -1,12 +1,15 @@
 let name = document.getElementById('name');
+let email = document.getElementById('email');
 let phone = document.getElementById('phone');
 let destination = document.getElementById('destination');
 let go = document.getElementById('go');
 let returne = document.getElementById('return');
 let submit = document.getElementById('submit');
 let DELETEALL = document.getElementById('DELETEALL');
-//لتخزين البيانات
+let tmp;
+let mood = 'create';
 let array;
+//لتخزين البيانات
 if (localStorage.getItem('stor') != null) {
     array = JSON.parse(localStorage.getItem('stor'));
 }
@@ -15,7 +18,7 @@ else {
 }
 if (submit) {
     submit.onclick = function () {
-        if (name.value != '' && phone.value != '') {
+        if (name.value != '' && phone.value != '' && destination.value != '' && go.value != '' && returne.value != '') {
             let object = {
                 name: name.value,
                 phone: phone.value,
@@ -23,13 +26,22 @@ if (submit) {
                 go: go.value,
                 returne: returne.value
             }
-            array.push(object);
+            if (mood === 'create') {
+                array.push(object);
+            }
+            else {
+                array[tmp] = object;
+                mood = 'create';
+                submit.innerHTML = 'Book now';
+                email.style.display = 'block';
+
+            }
             localStorage.setItem('stor', JSON.stringify(array));
-            window.alert("تم الحجز بنجاح");
+            window.alert("Success!");
             clear();
             showData();
         } else {
-            window.alert("يرجي ادخال الاسم ورقم الهاتف علي الاقل");
+            window.alert("Please Fill All Fields");
         }
     }
 }
@@ -38,13 +50,14 @@ if (submit) {
 function clear() {
     name.value = '';
     phone.value = '';
+    email.value = '';
     destination.value = '';
     go.value = '';
     returne.value = '';
 }
 //عرض المدخلات
 function showData() {
-    if (!tbody) returne;
+    if (!tbody) return;
     let table = '';
     for (let i = 0; i < array.length; i++) {
         {
@@ -56,7 +69,7 @@ function showData() {
                 <td>${array[i].destination}</td>
                 <td>${array[i].go}</td>
                 <td>${array[i].returne}</td>
-                <td><button class="upd">Update</button></td>
+                <td><button class="upd" onclick="updateData(${i})">Update</button></td>
                 <td><button class="del" onclick="deleteData(${i})">Delete</button></td>
             </tr>
         `};
@@ -84,3 +97,17 @@ function deleteAllData() {
     localStorage.clear();
     showData();
 }
+//فنكشن التعديل
+function updateData(i) {
+    name.value = array[i].name;
+    phone.value = array[i].phone;
+    destination.value = array[i].destination;
+    go.value = array[i].go;
+    returne.value = array[i].returne;
+    submit.innerHTML = 'Update';
+    mood = 'update';
+    email.style.display = 'none';
+    tmp = i;
+    scroll({ top: 0, behavior: 'smooth' });
+}
+
