@@ -217,6 +217,18 @@ main {
     text-transform: capitalize;
 }
 
+.background_img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(5px);
+    transform: scale(1.05);
+}
+
 /* tablet responsive design. */
 @media (max-width: 768px) {
 
@@ -488,17 +500,19 @@ form button:hover {
         transform: translateX(-15px);
     }
 }
-/* table*/
-.table{
-    padding: 3%;
-    background-color: #255252 ;
-    overflow-x: auto;
 
+/* table*/
+.table {
+    padding: 3%;
+    background-color: #255252;
+    overflow-x: auto;
 }
-table{
+
+table {
     width: 100%;
-    color:var(--color-almond) ;
+    color: var(--color-almond);
 }
+
 table td {
     text-align: center;
 }
@@ -563,4 +577,12 @@ table tbody tr td .del:hover {
 .delall:hover {
     background-color: rgb(186, 46, 46);
     transform: scale(1.1);
+}
+
+@media (max-width:400px) {
+
+    /* table*/
+    .table {
+        font-size: 0.7rem;
+    }
 }
