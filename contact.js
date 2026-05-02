@@ -5,8 +5,8 @@ let email = document.getElementById('email');
 let submit = document.getElementById('submit');
 let emailError = document.getElementById('emailError');
 let phoneError = document.getElementById('phoneError');
-// إعادة تعيين الرسايل (عشان لو الخطأ اتصلح تختفي)
 submit.onclick = function (e) {
+    //اعدة تعين الراسئل علشان لو الخطأ اتصلح
     emailError.style.display = 'none';
     phoneError.style.display = 'none';
     let check = true;
@@ -32,6 +32,7 @@ submit.onclick = function (e) {
         phoneError.style.display = 'block';
         check = false;
     }
+    //علشان لو في حاجة غلط الصفحة متعملش فريش
     if (check === false) {
         e.preventDefault();
     }
