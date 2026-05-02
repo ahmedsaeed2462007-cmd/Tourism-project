@@ -283,6 +283,7 @@ form h2 {
     text-align: center;
     color: #125a51;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .input-part {
@@ -294,30 +295,46 @@ form h2 {
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
+    font-size: 20;
+    font-weight: 700;
 }
 
 .input-part input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 15px;
+    border: 3px solid #ccc;
+    border-radius: 15px;
     box-sizing: border-box;
+    outline: none;
+    border: none;
+    background-color: #dcd6d6d4;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.input-part input:focus {
+    border: 3px solid green;
+    background-color: #e7e4e4;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     background-color: #125a51;
     color: white;
     border: none;
-    border-radius: 5px;
+    outline: none;
+    border-radius: 15px;
     cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.4s;
 }
 
 .submit-btn:hover {
-    background-color: #113641;
+    background-color: #228baa;
+    scale: 1.07;
+    letter-spacing: 2px;
 }
 
 
@@ -540,4 +557,20 @@ form h2 {
         padding-top: 7px;
         font-size: 1rem;
     }
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    background-color: #dcd6d6d4;
+    border-radius: 15px;
+}
+
+textarea:focus {
+    border: green 3px solid;
 }
