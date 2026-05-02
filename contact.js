@@ -6,17 +6,18 @@ let submit = document.getElementById('submit');
 let emailError = document.getElementById('emailError');
 let phoneError = document.getElementById('phoneError');
 submit.onclick = function (e) {
-    //اعدة تعين الراسئل علشان لو الخطأ اتصلح
+    // إعادة تعيين الرسايل (عشان لو الخطأ اتصلح تختفي)
     emailError.style.display = 'none';
     phoneError.style.display = 'none';
     let check = true;
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // check email
     if (email.value === "") {
         emailError.textContent = "Email is required";
         emailError.style.display = 'block';
         check = false;
     }
-    else if (!email.value.includes('/^[^\s@]+@[^\s@]+\.[^\s@]+$/')) {
+    else if (!emailPattern.test(email.value)) {
         emailError.textContent = "Please enter a valid email (e.g. name@mail.com)";
         emailError.style.display = 'block';
         check = false;
@@ -32,7 +33,6 @@ submit.onclick = function (e) {
         phoneError.style.display = 'block';
         check = false;
     }
-    //علشان لو في حاجة غلط الصفحة متعملش فريش
     if (check === false) {
         e.preventDefault();
     }
