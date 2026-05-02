@@ -377,7 +377,7 @@ function displayProgramDetails() {
 
 // دالة الحجز
 function bookProgram(programName) {
-    var bookingUrl = "book-a-toor.html?destination=" + encodeURIComponent(programName);
+    var bookingUrl = "book-a-toor.html?destinations=" + encodeURIComponent(programName);
     window.location.href = bookingUrl;
 }
 
