@@ -166,6 +166,54 @@ main {
     flex-direction: column;
 }
 
+/* الكونتينر الكبير بتاع السيرش بار */
+main .search-section {
+    background-color: var(--color-eclipse);
+    border-bottom: 4px solid var(--color-earthydrift);
+    padding: 25px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+main .search-section label {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-almond);
+}
+
+main .search-section input {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 2px solid var(--color-earthydrift);
+    background-color: var(--color-green);
+    color: var(--color-almond);
+    flex: 1;
+    max-width: 450px;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+main .search-section input:hover,
+main .search-section input:focus {
+    border-color: var(--color-timberbreeze);
+    background-color: var(--color-eclipse);
+}
+
+/*added by js*/
+
+main .card-highlighted {
+    transform: scale(1.1) !important;
+    border-color: var(--color-fernwhisper) !important;
+    box-shadow: 0 0 25px var(--color-fernwhisper) !important;
+}
+
 main .country {
     margin: 20px;
     border: 5px solid var(--color-earthydrift);
@@ -204,11 +252,12 @@ main .country .country-header h2 {
     width: 200px;
     text-align: center;
     font-size: 28px;
+    transition: all 0.3s;
+    transform-origin: center;
 }
 
 main .country .country-header h2:hover {
     transform: scale(1.2);
-    transition: 0.3s;
     color: var(--color-earthydrift);
     text-decoration: underline;
 }
@@ -217,7 +266,8 @@ main .country .distination {
     background-color: var(--color-green);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
     padding: 40px 40px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -230,14 +280,12 @@ main .country .distination .card {
     border: 2px solid var(--color-earthydrift);
     box-shadow: 2px 2px 20px var(--color-eclipse);
     border-radius: 10px;
-    flex-shrink: 1;
     min-width: 280px;
+    transition: 0.3s;
 }
 
 main .country .distination .card img {
-    width: 380px;
-    min-width: 280px;
-    flex-shrink: 1;
+    width: 100%;
     height: 300px;
     border-radius: 15px;
     box-shadow: 2px 2px 10px var(--color-green);
@@ -261,7 +309,7 @@ main .country .distination .card .btn {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     height: 35px;
-
+    
 }
 
 main .country .distination .card .btn button {
@@ -276,7 +324,6 @@ main .country .distination .card .btn button {
 
 main .country .distination .card:hover {
     transform: scale(1.1);
-    transition: 0.3s;
 }
 
 main .country .distination .card .btn button:hover {
@@ -285,6 +332,46 @@ main .country .distination .card .btn button:hover {
     background-color: #40534c64;
     color: var(--color-earthydrift);
     text-decoration: underline;
+}
+
+/* كل ما يخص الفوتر */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #1A3636;
+    border-top: 4px solid var(--color-almond);
+    margin-top: auto;
+    width: 100%;
+    padding: 30px 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer .trademark {
+    display: block;
+}
+
+footer .social-icons {
+    display: flex;
+    padding: 0px 10px 10px 10px;
+    gap: 25px;
+    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+footer .social-icons a {
+    color: var(--color-almond);
+    font-size: 1.7rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+footer .social-icons a:hover {
+    color: #ffffff;
+    transform: translateY(-5px);
 }
 
 /* كل ما يخص الفوتر */
@@ -407,11 +494,11 @@ footer .social-icons a:hover {
     main .country {
         margin: 15px;
     }
-
+    
     main .country .country-header {
         height: 300px;
     }
-
+    
     main .country .country-header h2 {
         font-size: 22px;
         width: auto;
@@ -419,37 +506,37 @@ footer .social-icons a:hover {
         left: 50%;
         transform: translateX(-50%);
     }
-
+    
     main .country .distination {
         padding: 25px 20px;
         justify-content: center;
         gap: 20px;
     }
-
+    
     main .country .distination .card {
-        min-width: 100%;
-        max-width: 400px;
-        margin: 0;
+        max-width: calc(100% - 60px);
+        height: auto;
+        margin: 15px 0px;
     }
-
+    
     main .country .distination .card img {
         width: 100%;
-        height: 250px;
+        height: auto;
         max-width: 100%;
     }
-
+    
     main .country .distination .card .info {
         line-height: 25px;
     }
-
+    
     main .country .distination .card .info h2 {
         font-size: 1.1rem;
     }
-
+    
     main .country .distination .card .info h3 {
         font-size: 0.95rem;
     }
-
+    
     main .country .distination .card .btn button {
         font-size: 16px;
         padding: 8px 12px;
@@ -551,10 +638,22 @@ footer .social-icons a:hover {
         border: 3px solid var(--color-earthydrift);
     }
 
+    main .search-section {
+            padding: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+    main .search-section input {
+            max-width: 100%;
+            width: 100%;
+        }
+    
     main .country .country-header {
         height: 220px;
     }
-
+    
     main .country .country-header h2 {
         font-size: 18px;
         width: auto;
@@ -563,17 +662,17 @@ footer .social-icons a:hover {
         transform: translateX(-50%);
         top: 3%;
     }
-
+    
     main .country .country-header h2:hover {
         transform: translateX(-50%) scale(1.1);
     }
-
+    
     main .country .distination {
         padding: 15px 12px;
         flex-direction: column;
         align-items: stretch;
     }
-
+    
     main .country .distination .card {
         min-width: 100%;
         max-width: 100%;
@@ -581,61 +680,62 @@ footer .social-icons a:hover {
         padding: 15px;
         flex-shrink: 0;
     }
-
+    
     main .country .distination .card .pic {
         width: 100%;
     }
-
+    
     main .country .distination .card img {
         width: 100%;
-        height: 200px;
+        height: auto;
         max-width: 100%;
     }
-
+    
     main .country .distination .card .info {
         line-height: 20px;
         margin: 8px 0;
     }
-
+    
     main .country .distination .card .info h2 {
         font-size: 1rem;
         margin-bottom: 6px;
     }
-
+    
     main .country .distination .card .info h3 {
         font-size: 0.85rem;
         margin: 6px 0;
     }
-
+    
     main .country .distination .card .info ul {
         padding-left: 15px;
         font-size: 0.8rem;
     }
-
+    
     main .country .distination .card .info li {
         margin: 4px 0;
     }
-
+    
     main .country .distination .card .btn {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
         height: auto;
         margin-top: 12px;
     }
-
+    
     main .country .distination .card .btn button {
         font-size: 13px;
         padding: 8px 10px;
         border: 1.5px solid var(--color-earthydrift);
     }
-
+    
     main .country .distination .card:hover {
         transform: scale(1.02);
     }
-
+    
     main .country .distination .card .btn button:hover {
         transform: scale(1.05);
     }
+    
 
     /* Footer for mobile */
     footer {
@@ -655,5 +755,16 @@ footer .social-icons a:hover {
 
     footer .trademark {
         font-size: 11px;
+    }
+}
+@media (max-width: 320px) {
+    main .country .distination .card .pic {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    main .country .distination .card .pic img {
+        max-width: 100% !important;
+        width: 100% !important;
     }
 }
