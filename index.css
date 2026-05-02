@@ -338,6 +338,15 @@ p span {
     margin-left: 0 0 15px 0;
 }
 
+.other-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+    padding: 20px;
+    gap: 20px;
+}
+
 .home-end {
     margin: 30px 0 30px 0;
 }
@@ -468,6 +477,19 @@ p span {
         padding: 30px 15px;
         gap: 30px;
     }
+
+    .other-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    audio {
+        margin-top: 15px;
+    }
 }
 
 /* mobile responsive design */
@@ -584,5 +606,31 @@ p span {
 
     .card-box p {
         font-size: 1rem;
+    }
+
+    .other-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    video {
+        max-width: 400px;
+        max-height: 200px;
+        width: 70%;
+    }
+
+    iframe {
+        max-width: 400px;
+        max-height: 300px;
+        width: 70%;
+    }
+
+    audio {
+        margin-top: 15px;
+        width: 70%;
     }
 }
