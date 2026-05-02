@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-</html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,24 +61,28 @@
                 <h2>Customer support</h2>
 
                 <div class="input-part">
-                    <label>Customer Name</label>
-                    <input type="text" placeholder="Name">
+                    <label for="name">Customer Name</label>
+                    <input id="name" type="text" placeholder="Name" required name="name">
                 </div>
 
                 <div class="input-part">
-                    <label>Phone Number</label>
-                    <input type="text" placeholder="Phone Number">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="tel" placeholder="Phone Number" required maxlength="11" name="phone">
+                    <div id="phoneError" style="color: red; font-size: 20px; display: none;"></div>
                 </div>
 
-                <div class="input-part">
-                    <label>E-mail</label>
-                    <input type="email" placeholder="Enter your email">
+                <div class=" input-part">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" placeholder="Enter your email" required name="email">
+                    <div id="emailError" style="color: red;font-size: 20px;display: none;">Please enter a valid email
+                        address.</div>
                 </div>
                 <div class="input-part">
-                    <label>Report your problem</label>
-                    <input type="text" placeholder="">
+                    <label for="problem">Report your problem</label>
+                    <textarea id="problem" name="problem" placeholder="Describe your issue..." required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Submit</button>
+
+                <button type="submit" class="submit-btn" id="submit">Submit</button>
             </form>
         </div>
 
@@ -94,4 +96,7 @@
             <p class="trademark">&copy; Travella inc. 2026 All Rights Reserved</p>
         </footer>
     </main>
+    <script src="contact.js"></script>
 </body>
+
+</html>
