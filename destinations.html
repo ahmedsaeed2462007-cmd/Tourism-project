@@ -51,22 +51,45 @@
             </div>
         </nav>
     </header>
+    
     <main>
+
+        <!--search-->
+        <div class="search-section">
+            <label for="program-search">Find a Program:</label>
+            <input
+                type="text"
+                id="program-search"
+                list="programs-list"
+                placeholder="Search a program..."
+                autocomplete="off"
+                oninput="goToProgram(this.value)"
+            />
+            <datalist id="programs-list">
+                <option value="Cairo Classic Journey"></option>
+                <option value="Kings of the Nile"></option>
+                <option value="Red Sea Adventure"></option>
+                <option value="Istanbul Splendor"></option>
+                <option value="Cappadocia Adventure"></option>
+                <option value="Turquoise Coast"></option>
+                <option value="Cultural Escape"></option>
+                <option value="Andalusia Adventure"></option>
+                <option value="Costa del Sol"></option>
+            </datalist>
+        </div>
+
         <!--Egypt-->
         <section class="country">
-
             <div class="country-header">
                 <img src="media/Egypt-hero.jpg">
                 <h2>Egypt</h2>
             </div>
 
             <div class="distination">
-                <div class="card">
+                <div class="card" id="egypt-cairo">
                     <div class="pic">
                         <img src="media/Egypt-program1.png">
                     </div>
-
-
                     <div class="info">
                         <h2>Program Details:</h2>
                         <h3>Cairo Classic Journey - $899 (4 days/3 nights)</h3>
@@ -76,22 +99,16 @@
                             <li>Khan El-Khalili Bazaar shopping</li>
                         </ul>
                     </div>
-
-
                     <div class="btn">
-                        <button>Details</button>
-
-                        <button>Book</button>
+                        <button onclick="showDetails('Cairo Classic Journey')">Details</button>
+                        <button onclick="bookProgram('Cairo Classic Journey')">Book</button>
                     </div>
                 </div>
 
-
-                <div class="card">
+                <div class="card" id="egypt-kings">
                     <div class="pic">
                         <img src="media/Egypt-program2.png">
                     </div>
-
-
                     <div class="info">
                         <h2>Program Details:</h2>
                         <h3>Kings of the Nile - $1,299 (5 days/4 nights)</h3>
@@ -101,22 +118,16 @@
                             <li>Luxury Nile River Cruise</li>
                         </ul>
                     </div>
-
-
                     <div class="btn">
-                        <button>Details</button>
-
-                        <button>Book</button>
+                        <button onclick="showDetails('Kings of the Nile')">Details</button>
+                        <button onclick="bookProgram('Kings of the Nile')">Book</button>
                     </div>
                 </div>
 
-
-                <div class="card">
+                <div class="card" id="egypt-redsea">
                     <div class="pic">
                         <img src="media/Egypt-program3.png">
                     </div>
-
-
                     <div class="info">
                         <h2>Program Details:</h2>
                         <h3>Red Sea Adventure - $749 (4 days/3 nights)</h3>
@@ -126,12 +137,9 @@
                             <li>Water sports & beach relaxation</li>
                         </ul>
                     </div>
-
-
                     <div class="btn">
-                        <button>Details</button>
-
-                        <button>Book</button>
+                        <button onclick="showDetails('Red Sea Adventure')">Details</button>
+                        <button onclick="bookProgram('Red Sea Adventure')">Book</button>
                     </div>
                 </div>
             </div>
@@ -140,44 +148,35 @@
 
         <!--Turkey-->
         <section class="country">
-
             <div class="country-header">
                 <img src="media/Turkey-hero.jpg">
                 <h2>Turkey</h2>
             </div>
 
             <div class="distination">
-                <div class="card">
+                <div class="card" id="turkey-istanbul">
                     <div class="pic">
                         <img src="media/Turkey-program1.png">
                     </div>
-
-
                     <div class="info">
                         <h2>Program Details:</h2>
-                        <h3> Istanbul Splendor - $799 (4 days/3 nights)</h3>
+                        <h3>Istanbul Splendor - $799 (4 days/3 nights)</h3>
                         <ul>
                             <li>Blue Mosque & Hagia Sophia</li>
                             <li>Topkapi Palace & Underground Cistern</li>
                             <li>Grand Bazaar, Spice Market & Bosphorus cruise</li>
                         </ul>
                     </div>
-
-
                     <div class="btn">
-                        <button>Details</button>
-
-                        <button>Book</button>
+                        <button onclick="showDetails('Istanbul Splendor')">Details</button>
+                        <button onclick="bookProgram('Istanbul Splendor')">Book</button>
                     </div>
                 </div>
 
-
-                <div class="card">
+                <div class="card" id="turkey-cappadocia">
                     <div class="pic">
                         <img src="media/Turkey-program2.png">
                     </div>
-
-
                     <div class="info">
                         <h2>Program Details:</h2>
                         <h3>Cappadocia Adventure - $999 (4 days/3 nights)</h3>
@@ -187,22 +186,16 @@
                             <li>Goreme Open Air Museum & Rose Valley hiking</li>
                         </ul>
                     </div>
-
-
                     <div class="btn">
-                        <button>Details</button>
-
-                        <button>Book</button>
+                        <button onclick="showDetails('Cappadocia Adventure')">Details</button>
+                        <button onclick="bookProgram('Cappadocia Adventure')">Book</button>
                     </div>
                 </div>
 
-
-                <div class="card">
+                <div class="card" id="turkey-coast">
                     <div class="pic">
                         <img src="media/Turkey-program3.png">
                     </div>
-
-
                     <div class="info">
                         <h2>Program Details:</h2>
                         <h3>Turquoise Coast - $1,299 (5 days/4 nights)</h3>
@@ -212,12 +205,9 @@
                             <li>Ancient rock tombs in Dalyan & Bodrum Castle visit</li>
                         </ul>
                     </div>
-
-
                     <div class="btn">
-                        <button>Details</button>
-
-                        <button>Book</button>
+                        <button onclick="showDetails('Turquoise Coast')">Details</button>
+                        <button onclick="bookProgram('Turquoise Coast')">Book</button>
                     </div>
                 </div>
             </div>
@@ -226,19 +216,16 @@
 
         <!--Spain-->
         <section class="country">
-
             <div class="country-header">
                 <img src="media/Spain-hero.jpg">
                 <h2>Spain</h2>
             </div>
 
             <div class="distination">
-                <div class="card">
+                <div class="card" id="spain-cultural">
                     <div class="pic">
                         <img src="media/Spain-program1.png">
                     </div>
-
-
                     <div class="info">
                         <h2>Program Details:</h2>
                         <h3>Cultural Escape - $1,099 (5 days/4 nights)</h3>
@@ -248,22 +235,16 @@
                             <li>Gothic Quarter exploration & Flamenco show</li>
                         </ul>
                     </div>
-
-
                     <div class="btn">
-                        <button>Details</button>
-
-                        <button>Book</button>
+                        <button onclick="showDetails('Cultural Escape')">Details</button>
+                        <button onclick="bookProgram('Cultural Escape')">Book</button>
                     </div>
                 </div>
 
-
-                <div class="card">
+                <div class="card" id="spain-andalusia">
                     <div class="pic">
                         <img src="media/Spain-program2.png">
                     </div>
-
-
                     <div class="info">
                         <h2>Program Details:</h2>
                         <h3>Andalusia Adventure - $899 (4 days/3 nights)</h3>
@@ -273,22 +254,16 @@
                             <li>Olive oil farm tour, Santa Cruz & Plaza de España</li>
                         </ul>
                     </div>
-
-
                     <div class="btn">
-                        <button>Details</button>
-
-                        <button>Book</button>
+                        <button onclick="showDetails('Andalusia Adventure')">Details</button>
+                        <button onclick="bookProgram('Andalusia Adventure')">Book</button>
                     </div>
                 </div>
 
-
-                <div class="card">
+                <div class="card" id="spain-costa">
                     <div class="pic">
                         <img src="media/Spain-program3.png">
                     </div>
-
-
                     <div class="info">
                         <h2>Program Details:</h2>
                         <h3>Costa del Sol - $1,199 (5 days/4 nights)</h3>
@@ -298,19 +273,15 @@
                             <li>Arab Baths experience & Optional water sports</li>
                         </ul>
                     </div>
-
-
                     <div class="btn">
-                        <button>Details</button>
-
-                        <button>Book</button>
+                        <button onclick="showDetails('Costa del Sol')">Details</button>
+                        <button onclick="bookProgram('Costa del Sol')">Book</button>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
-
+    
     <footer>
         <div class="social-icons">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
