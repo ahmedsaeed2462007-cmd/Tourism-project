@@ -634,17 +634,3 @@ p span {
         width: 70%;
     }
 }
-
-@media(max-width:1100px) {
-    .card-box {
-        flex-direction: column;
-        align-items: center;
-        width: 75%;
-        padding: 30px 15px;
-        gap: 30px;
-    }
-    .card-box img {
-        max-width: 100%;
-        height: 350px;
-    }
-}

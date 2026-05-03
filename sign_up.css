@@ -1,10 +1,190 @@
+/*                  General Styles                  */
+/* ----------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
+/* variable names for different colors */
+/* to choose a color write: "color: var(--color-almond)" */
+:root {
+    --color-almond: #D6BD98;
+    --color-matchabrew: #74ca7f;
+    --color-forestroast: #399775;
+    --color-eclipse: #1A3636;
+    --color-timberbreeze: #4C2B12;
+    --color-forestfloor: #7F5235;
+    --color-earthydrift: #BB8954;
+    --color-fernwhisper: #F5F5D3;
+    --color-canopygreen: #5c7c4d;
+    --color-deepwood: #236e45;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* خلي عناصر الهيدر مترتبة ومتوسطة الصفحة */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #1A3636;
+    padding: 15px 40px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--color-almond);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* حددت خط اللوجو وحجمه وشكله */
+header .title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.3rem;
+    letter-spacing: 4px;
+    color: var(--color-almond);
+    text-decoration: underline;
+}
+
+/* عشان النافبار يملأ الصفحة */
+nav {
+    width: 100%;
+}
+
+/* شوية خصائص عادية */
+.navbar {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    padding: 0 30px;
+    margin: 0;
+}
+
+
+.visible_links {
+    margin-left: auto;
+    display: flex;
+    margin-right: 25px;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
+.navbar li a {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--color-almond);
+    padding: 10px;
+    border: 2px solid var(--color-almond);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* الهوفر ايفكتس */
+.navbar li a:hover,
+.navbar li a:focus {
+    background-color: var(--color-forestroast);
+    color: white;
+}
+
+/* زرار الدروب داون منيو */
+.dropbtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-almond);
+    cursor: pointer;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dropbtn:hover {
+    color: #ffffff;
+}
+
+/* ضرورية عشان يشتغل */
+.dropdown {
+    position: relative;
+}
+
+/* الدروب داون منيو نفسها */
+.dropdown_content {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    /* ضرورية عشان المنيو تظهر كويس */
+    position: absolute;
+    /* النسب دي مهمة جدا عشان تشتغل كويس */
+    top: 100%;
+    left: 0%;
+    /* عشان اظبط المكان الي هيظهر فيه */
+    transform: translateX(-6%);
+    /* حجمه على الشاشة */
+    min-width: 250px;
+    padding: 15px 0;
+    border-radius: 0 0 12px 12px;
+    background-color: var(--color-eclipse);
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.3);
+    /* ال زد دي هتخليه يظهر فوق اي حاجة عالصفحة */
+    z-index: 1;
+    /* هيبقى مخفي لحد ما نعمل هوفر */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* اللينكات جوا الدروب داون منيو */
+.dropdown_content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 15px 10px 0px 0px;
+}
+
+.dropdown:hover .dropdown_content {
+    opacity: 1;
+    visibility: visible;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--color-almond);
+    background-color: var(--color-forestfloor);
+}
+
+/* can be removed in other pages */
+.background_img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(5px);
+    transform: scale(1.05);
+}
+
+/*
 body {
     height: 100vh;
     background: url('media/Istanbul City.jpg') no-repeat center/cover;
@@ -13,6 +193,7 @@ body {
     align-items: center;
     padding-top: 80px;
 }
+
 .navbar {
     position: absolute;
     top: 0;
@@ -32,7 +213,6 @@ body {
     font-weight: bold;
 }
 
-/* Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -64,26 +244,44 @@ body {
 
 .nav-links li a:hover {
     color: #00d4ff;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(100px);
 }
+
 .glass-box {
-    width: 90;
+    width: 90%;
     padding: 25px;
-    width:90%;
+    width: 90%;
     padding: 25px;
     max-width: 350px;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    text-align: center;
-    color: #2D4530;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: var(--color-eclipse);
 }
+
+.glass-box p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
 .glass-box h2 {
+    font-weight: bold;
+    text-align: center;
     margin-bottom: 20px;
 }
+
 .input-box {
     margin: 15px 0;
 }
+
 
 .input-box input {
     width: 100%;
@@ -91,40 +289,71 @@ body {
     border: none;
     border-radius: 8px;
     outline: none;
+    font-size: 0.9rem;
+
+}
+
+.input-boxS {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.input-boxS input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: none;
+    color: var(--color-deepwood);
+}
+
+.input-boxS label {
+    display: block;
+    width: fit-content;
+    padding: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    color: var(--color-deepwood);
 }
 
 /* Button */
-button {
+main button {
     width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 8px;
-    background: #00aaff;
-    color: #E1DBC9;
+    background: var(--color-matchabrew);
+    color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
-button:hover {
-    background: #008ecc;
-}
-p {
-    margin-top: 15px;
-    font-size: 14px;
+main button:hover {
+    background: var(--color-deepwood);
 }
 
-a {
-    color: #00d4ff;
+main p {
+    margin-bottom: 5px;
+}
+
+main a {
+    color: var(--color-fernwhisper);
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
 }
+
 .social-icons {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 15px;
     margin-top: 20px;
 }
@@ -138,18 +367,19 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(192, 165, 165);
+    color: var(--color-fernwhisper);
     font-size: 20px;
     transition: 0.3s ease;
     text-decoration: none;
 }
 
 .social-icons a:hover {
-    background: #00d2ff;
+    background: white;
     color: #5E4B2B;
     transform: translateY(-5px);
 }
-@media (max-width: 768px) {
+
+/* @media (max-width: 768px) {
 
     .navbar {
         padding: 15px 20px;
@@ -159,7 +389,7 @@ a:hover {
         position: absolute;
         top: 60px;
         right: 0;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0, 0, 0, 0.7);
         width: 200px;
         flex-direction: column;
         align-items: center;
@@ -172,19 +402,155 @@ a:hover {
     .nav-links.active {
         display: flex;
     }
+} */
+
+/* tablet responsive design. */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    header .title {
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .navbar {
+        gap: 5px;
+    }
+
+    .navbar li {
+        margin: 0;
+    }
+
+    .navbar li a {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    .visible_links {
+        margin-right: 0;
+        gap: 8px;
+    }
+
+    .visible_links li a {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .dropbtn {
+        padding: 10px;
+    }
+
+    .dropbtn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dropdown_content {
+        top: 100%;
+        left: 0;
+        transform: translateX(-6%);
+        min-width: 165px;
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+    }
+
+    .dropdown_content li {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .dropdown_content a {
+        margin: 0px 7px 0px 0px;
+        font-size: 0.85rem;
+    }
 }
-.menu-toggle {
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
-    color: #2D4530;
-    font-size: 24px;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    cursor: pointer;
-    transition: 0.3s;
-    position: absolute;
-    left:5px;
-    top: 5px;
+
+/* mobile responsive design */
+@media (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+        padding: 12px 15px;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    header .title {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+
+    .navbar {
+        position: relative;
+        padding: 0;
+        gap: 3px;
+    }
+
+    .navbar li {
+        margin: 0;
+    }
+
+    .navbar li a {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+        border: 1px solid var(--color-almond);
+    }
+
+    .visible_links {
+        gap: 5px;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+    }
+
+    .visible_links li a {
+        font-size: 0.55rem;
+        padding: 6px 8px;
+        border: 1px solid var(--color-almond);
+    }
+
+    .dropdown_content {
+        top: 100%;
+        left: 0;
+        transform: translateX(-7%);
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+    }
+
+    .dropbtn {
+        padding: 6px;
+    }
+
+    .dropbtn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .dropdown_content {
+        min-width: 110px;
+    }
+
+    .dropdown_content li {
+        padding: 4px 10px;
+    }
+
+    .glass-box p {
+        font-size: 1rem;
+    }
 }
