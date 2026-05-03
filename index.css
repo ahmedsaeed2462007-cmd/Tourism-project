@@ -342,6 +342,7 @@ p span {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin: 30px;
     padding: 20px;
     gap: 20px;
@@ -632,5 +633,12 @@ p span {
     audio {
         margin-top: 15px;
         width: 70%;
+    }
+}
+@media(max-width:1000px){
+    .card-box{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column ;
     }
 }
