@@ -32,12 +32,6 @@ function goToProgram(typedValue) {
     }, 2000);
 }
 
-function showDetails(programName) {
-
-    var detailsUrl = "details.html?program=" + encodeURIComponent(programName);
-
-    window.location.href = detailsUrl;
-}
 
 function bookProgram(programName) {
 
