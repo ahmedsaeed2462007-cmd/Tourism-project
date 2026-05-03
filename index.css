@@ -23,7 +23,8 @@
 
 html,
 body {
-    height: 100%;
+    width: 100%;
+    min-height: 100vh;
 }
 
 
@@ -593,7 +594,6 @@ p {
         padding: 4px 10px;
     }
 
-    /* Footer for mobile */
     footer {
         padding: 12px 8px;
         gap: 10px;
@@ -668,10 +668,11 @@ p {
         width: 70%;
     }
 }
-@media(max-width:1000px){
-    .card-box{
+
+@media(max-width:1000px) {
+    .card-box {
         display: flex;
         flex-wrap: wrap;
-        flex-direction:column ;
+        flex-direction: column;
     }
 }

@@ -23,11 +23,14 @@
 
 html,
 body {
-    height: 100%;
+    width: 100%;
+    min-height: 100vh;
 }
 
 body {
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -41,7 +44,6 @@ header {
     border-bottom: 4px solid var(--color-almond);
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
 }
-
 
 
 /* حددت خط اللوجو وحجمه وشكله */
@@ -193,7 +195,7 @@ footer .trademark {
 footer .social-icons {
     display: flex;
     padding: 0px 10px 10px 10px;
-    gap: 25px;
+    gap: 20px;
     text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -210,9 +212,26 @@ footer .social-icons a:hover {
     transform: translateY(-5px);
 }
 
+footer .contact p {
+    font-size: 1.4rem;
+    font-weight: 550;
+    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.9);
+}
+
+footer .contact a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--color-earthydrift);
+    transition: all 0.3s ease;
+}
+
+footer .contact a:hover {
+    color: #ffffff;
+}
+
 .background_img {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     position: fixed;
     top: 0;
@@ -235,7 +254,7 @@ footer .social-icons a:hover {
 .card {
     padding: 20px 20px;
     background-color: var(--color-eclipse);
-    border: 2px solid var(--color-earthydrift);
+    border: 3px solid var(--color-earthydrift);
     box-shadow: 2px 2px 20px var(--color-eclipse);
     border-radius: 20px;
     flex-shrink: 1;
@@ -251,25 +270,36 @@ footer .social-icons a:hover {
     flex-shrink: 1;
     height: 300px;
     border-radius: 20px;
-    box-shadow: 2px 2px 10px var(--color-green);
+    box-shadow: 2px 2px 10px black;
     cursor: pointer;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .card .info {
+    display: block;
     color: var(--color-fernwhisper);
-    line-height: 30px;
+    line-height: 23px;
+    margin-top: 15px;
     margin: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
-.info h2 {
+h2 {
+    display: block;
+    margin: 10px;
     text-decoration: underline;
     color: var(--color-earthydrift);
 }
 
 .card:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
+    transform: scale(1.05);
+    transition: ease all 0.4s;
+    border: 2px solid white;
 }
+
 
 /* tablet responsive design. */
 @media (max-width: 768px) {
@@ -343,12 +373,22 @@ footer .social-icons a:hover {
     }
 
     footer {
-        font-size: 0.9rem;
         padding: 15px 10px;
     }
 
     footer .social-icons {
-        padding: 10px 10px 7px 10px;
+        font-size: 0.9rem;
+        padding: 10px 10px 7px;
+    }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 1.2rem;
+    }
+
+    .card .info {
+        margin: 10px;
+        font-size: 1rem;
     }
 }
 
@@ -371,7 +411,6 @@ footer .social-icons a:hover {
     nav {
         width: 100%;
     }
-
 
     .navbar {
         position: relative;
@@ -427,7 +466,6 @@ footer .social-icons a:hover {
     }
 
     footer {
-        font-size: 12px;
         padding: 12px 8px;
         gap: 10px;
     }
@@ -442,6 +480,27 @@ footer .social-icons a:hover {
     }
 
     footer .trademark {
-        font-size: 11px;
+        font-size: 0.8rem;
+    }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        min-width: unset;
+    }
+
+    .card img {
+        height: 220px;
+        min-width: 100%;
+    }
+
+    .card .info {
+        margin: 10px;
+        font-size: 0.8rem;
     }
 }
