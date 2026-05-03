@@ -318,12 +318,12 @@ main {
     }
 
     footer {
-        font-size: 0.9rem;
         padding: 15px 10px;
     }
 
     footer .social-icons {
-        padding: 10px 10px 7px 10px;
+        font-size: 0.9rem;
+        padding: 10px 10px 7px;
     }
 
     footer .contact p,
@@ -407,7 +407,6 @@ main {
     }
 
     footer {
-        font-size: 12px;
         padding: 12px 8px;
         gap: 10px;
     }
