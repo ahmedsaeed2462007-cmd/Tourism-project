@@ -111,3 +111,9 @@ function updateData(i) {
     scroll({ top: 0, behavior: 'smooth' });
 }
 
+function bookProgram(programName) {
+
+    var bookingUrl = "book-a-toor.html?destination=" + encodeURIComponent(programName);
+
+    window.location.href = bookingUrl;
+}
