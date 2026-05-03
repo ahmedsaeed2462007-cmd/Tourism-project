@@ -190,7 +190,7 @@ footer .trademark {
 footer .social-icons {
     display: flex;
     padding: 0px 10px 10px 10px;
-    gap: 25px;
+    gap: 20px;
     text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -205,6 +205,23 @@ footer .social-icons a {
 footer .social-icons a:hover {
     color: #ffffff;
     transform: translateY(-5px);
+}
+
+footer .contact p {
+    font-size: 1.4rem;
+    font-weight: 550;
+    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.9);
+}
+
+footer .contact a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--color-earthydrift);
+    transition: all 0.3s ease;
+}
+
+footer .contact a:hover {
+    color: #ffffff;
 }
 
 /*                     Home Page                    */
@@ -265,16 +282,14 @@ p {
     text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.9);
 }
 
-p span {
+.art1 span {
     display: block;
     margin-top: 10px;
     font-size: 2.2rem;
     font-weight: 700;
     text-shadow: 1px 3px 7px rgba(0, 0, 0, 0.7);
-}
-
-.art1 span {
-    transition: all 0.3s, text-shadow 0.3s ease;
+    transition: all 0.3s, ;
+    text-shadow: 0.3s ease;
 }
 
 .art1 span:hover {
@@ -344,7 +359,7 @@ p span {
     justify-content: center;
     margin: 30px;
     padding: 20px;
-    gap: 20px;
+    gap: 30px;
 }
 
 .home-end {
@@ -375,7 +390,13 @@ p span {
     text-shadow: 2px 6px 8px rgba(0, 0, 0, 0.9);
 }
 
-
+@media(max-width:1000px) {
+    .card-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
 
 /* tablet responsive design. */
 @media (max-width: 768px) {
@@ -449,12 +470,17 @@ p span {
     }
 
     footer {
-        font-size: 0.9rem;
         padding: 15px 10px;
     }
 
     footer .social-icons {
-        padding: 10px 10px 7px 10px;
+        font-size: 0.9rem;
+        padding: 10px 10px 7px;
+    }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 1.2rem;
     }
 
     .art1 {
@@ -473,7 +499,7 @@ p span {
     .card-box {
         flex-direction: column;
         align-items: center;
-        width: 75%;
+        width: 60%;
         padding: 30px 15px;
         gap: 30px;
     }
@@ -568,7 +594,6 @@ p span {
 
     /* Footer for mobile */
     footer {
-        font-size: 12px;
         padding: 12px 8px;
         gap: 10px;
     }
@@ -583,29 +608,37 @@ p span {
     }
 
     footer .trademark {
-        font-size: 11px;
+        font-size: 0.8rem;
     }
 
+    footer .contact p,
+    footer .contact a {
+        font-size: 0.8rem;
+    }
+
+
     .art1 p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .art1 p span {
-        font-size: 1.6rem;
+        margin-top: 5px;
+        font-size: 1.4rem;
     }
 
     .card-box {
+        width: 70%;
         padding: 20px 10px;
         gap: 40px;
     }
 
     .card-box img {
         max-width: 100%;
-        height: 350px;
+        height: 250px;
     }
 
     .card-box p {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
     .other-media {

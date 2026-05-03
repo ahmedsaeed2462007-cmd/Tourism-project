@@ -158,8 +158,6 @@ nav {
     visibility: visible;
 }
 
-
-
 /* Destinations page styles */
 main {
     display: flex;
@@ -308,7 +306,7 @@ main .country .distination .card .btn {
     width: 100%;
     height: 40px;
     margin: 10px;
-    
+
 }
 
 main .country .distination .card .btn button {
@@ -403,7 +401,7 @@ footer .trademark {
 footer .social-icons {
     display: flex;
     padding: 0px 10px 10px 10px;
-    gap: 25px;
+    gap: 20px;
     text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -418,6 +416,23 @@ footer .social-icons a {
 footer .social-icons a:hover {
     color: #ffffff;
     transform: translateY(-5px);
+}
+
+footer .contact p {
+    font-size: 1.4rem;
+    font-weight: 550;
+    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.9);
+}
+
+footer .contact a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--color-earthydrift);
+    transition: all 0.3s ease;
+}
+
+footer .contact a:hover {
+    color: #ffffff;
 }
 
 
@@ -496,11 +511,11 @@ footer .social-icons a:hover {
     main .country {
         margin: 15px;
     }
-    
+
     main .country .country-header {
         height: 300px;
     }
-    
+
     main .country .country-header h2 {
         font-size: 22px;
         width: auto;
@@ -508,37 +523,37 @@ footer .social-icons a:hover {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     main .country .distination {
         padding: 25px 20px;
         justify-content: center;
         gap: 20px;
     }
-    
+
     main .country .distination .card {
         max-width: calc(100% - 60px);
         height: auto;
         margin: 15px 0px;
     }
-    
+
     main .country .distination .card img {
         width: 100%;
         height: auto;
         max-width: 100%;
     }
-    
+
     main .country .distination .card .info {
         line-height: 25px;
     }
-    
+
     main .country .distination .card .info h2 {
         font-size: 1.1rem;
     }
-    
+
     main .country .distination .card .info h3 {
         font-size: 0.95rem;
     }
-    
+
     main .country .distination .card .btn button {
         font-size: 16px;
         padding: 8px 12px;
@@ -552,6 +567,11 @@ footer .social-icons a:hover {
 
     footer .social-icons {
         padding: 10px 10px 7px 10px;
+    }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 1.2rem;
     }
 }
 
@@ -641,21 +661,21 @@ footer .social-icons a:hover {
     }
 
     main .search-section {
-            padding: 20px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 12px;
-        }
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 
     main .search-section input {
-            max-width: 100%;
-            width: 100%;
-        }
-    
+        max-width: 100%;
+        width: 100%;
+    }
+
     main .country .country-header {
         height: 220px;
     }
-    
+
     main .country .country-header h2 {
         font-size: 18px;
         width: auto;
@@ -664,17 +684,17 @@ footer .social-icons a:hover {
         transform: translateX(-50%);
         top: 3%;
     }
-    
+
     main .country .country-header h2:hover {
         transform: translateX(-50%) scale(1.1);
     }
-    
+
     main .country .distination {
         padding: 15px 12px;
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     main .country .distination .card {
         min-width: 100%;
         max-width: 100%;
@@ -682,62 +702,62 @@ footer .social-icons a:hover {
         padding: 15px;
         flex-shrink: 0;
     }
-    
+
     main .country .distination .card .pic {
         width: 100%;
     }
-    
+
     main .country .distination .card img {
         width: 100%;
         height: auto;
         max-width: 100%;
     }
-    
+
     main .country .distination .card .info {
         line-height: 20px;
         margin: 8px 0;
     }
-    
+
     main .country .distination .card .info h2 {
         font-size: 1rem;
         margin-bottom: 6px;
     }
-    
+
     main .country .distination .card .info h3 {
         font-size: 0.85rem;
         margin: 6px 0;
     }
-    
+
     main .country .distination .card .info ul {
         padding-left: 15px;
         font-size: 0.8rem;
     }
-    
+
     main .country .distination .card .info li {
         margin: 4px 0;
     }
-    
+
     main .country .distination .card .btn {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
         height: auto;
         margin-top: 12px;
     }
-    
+
     main .country .distination .card .btn button {
         font-size: 13px;
         padding: 8px 10px;
         border: 1.5px solid var(--color-earthydrift);
     }
-    
+
     main .country .distination .card:hover {
         transform: scale(1.02);
     }
-    
+
     main .country .distination .card .btn button:hover {
         transform: scale(1.05);
     }
-    
+
 
     /* Footer for mobile */
     footer {
@@ -756,9 +776,15 @@ footer .social-icons a:hover {
     }
 
     footer .trademark {
-        font-size: 11px;
+        font-size: 0.8rem;
+    }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 0.8rem;
     }
 }
+
 @media (max-width: 320px) {
     main .country .distination .card .pic {
         max-width: 100% !important;

@@ -193,7 +193,7 @@ footer .trademark {
 footer .social-icons {
     display: flex;
     padding: 0px 10px 10px 10px;
-    gap: 25px;
+    gap: 20px;
     text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -208,6 +208,23 @@ footer .social-icons a {
 footer .social-icons a:hover {
     color: #ffffff;
     transform: translateY(-5px);
+}
+
+footer .contact p {
+    font-size: 1.4rem;
+    font-weight: 550;
+    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.9);
+}
+
+footer .contact a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--color-earthydrift);
+    transition: all 0.3s ease;
+}
+
+footer .contact a:hover {
+    color: #ffffff;
 }
 
 /*                     Home Page                    */
@@ -308,6 +325,11 @@ main {
     footer .social-icons {
         padding: 10px 10px 7px 10px;
     }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 1.2rem;
+    }
 }
 
 /* mobile responsive design */
@@ -400,7 +422,12 @@ main {
     }
 
     footer .trademark {
-        font-size: 11px;
+        font-size: 0.8rem;
+    }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 0.8rem;
     }
 }
 
