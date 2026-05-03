@@ -306,18 +306,20 @@ main .country .distination .card .info h2 {
 
 main .country .distination .card .btn {
     width: 100%;
-    padding: 20px;
-    height: 35px;
+    height: 40px;
+    margin: 10px 10px 10px 10px;
     
 }
 
 main .country .distination .card .btn button {
-    width: 100%;
+    width: 95%;
+    height: auto;
+    padding: 10px 0px;
     border: 2px solid var(--color-earthydrift);
     border-radius: 20px;
     background-color: var(--color-fernwhisper);
     color: var(--color-eclipse);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     box-shadow: 2px 2px 10px var(--color-green);
 }
