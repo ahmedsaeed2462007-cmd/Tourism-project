@@ -1,23 +1,35 @@
-document.querySelectorAll("form").forEach(form => {
-    form.addEventListener("submit", function (e) {
-        if (form.classList.contains("glass-box")) {
-            const email = form.querySelector("input[type='email']").value;
-            const password = form.querySelector("input[type='password']").value;
-            if (email === "" || !email.includes("@")) {
-                alert("Please enter a valid email");
-                e.preventDefault();
-                return;
-            }
-            if (password === "" || password.length < 6) {
-                alert("Password must be at least 6 characters");
-                e.preventDefault();
-                return;
-            }
-            alert("Login successful ✅");
-        }
-        else {
-            e.preventDefault();
-            alert("تم الإرسال بنجاح ✈️");
-        }
-    });
-});
+let pass = document.getElementById('pass');
+let email = document.getElementById('email');
+let submit = document.getElementById('submit');
+let emailError = document.getElementById('emailError');
+let passError = document.getElementById('passError');
+submit.onclick = function (e) {
+    emailError.style.display = 'none';
+    passError.style.display = 'none';
+    let check = true;
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.value.trim() === "") {
+        emailError.textContent = "Email is required";
+        emailError.style.display = 'block';
+        check = false;
+    } else if (!emailPattern.test(email.value)) {
+        emailError.textContent = "Please enter a valid email (e.g. name@mail.com)";
+        emailError.style.display = 'block';
+        check = false;
+    }
+    if (pass.value.trim() === "") {
+        passError.textContent = "Password is required";
+        passError.style.display = 'block';
+        check = false;
+    } else if (pass.value.length < 8) {
+        passError.textContent = "Password must be at least 8 characters";
+        passError.style.display = 'block';
+        check = false;
+    }
+    if (check === false) {
+        e.preventDefault();
+    } else {
+        alert("Account Created Successfully!");
+    }
+}
+
