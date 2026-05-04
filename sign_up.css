@@ -584,7 +584,21 @@ main button:hover {
         margin: 0px 7px 0px 0px;
         font-size: 0.85rem;
     }
-}
+
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer .social-icons {
+        font-size: 0.9rem;
+        padding: 10px 10px 7px;
+    }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 1.2rem;
+    }
+
 
 /* mobile responsive design */
 @media (max-width: 480px) {
