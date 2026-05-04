@@ -474,6 +474,13 @@ main {
         padding: 8px 12px;
     }
 
+    .visible_links select {
+        font-size: 0.85rem;
+        margin: auto;
+        width: 100px;
+        padding: 8px 0px;
+    }
+
     .dropbtn {
         padding: 10px;
     }
@@ -515,6 +522,7 @@ main {
     footer .contact a {
         font-size: 1.2rem;
     }
+
 
     .faq-hero {
         padding: 50px 20px;
