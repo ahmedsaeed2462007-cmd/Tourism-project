@@ -1,13 +1,10 @@
-/*                  General Styles                  */
-/* ----------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* variable names for different colors */
-/* to choose a color write: "color: var(--color-almond)" */
+
 :root {
     --color-almond: #D6BD98;
     --color-matchabrew: #74ca7f;
@@ -27,7 +24,7 @@ body {
 }
 
 
-/* خلي عناصر الهيدر مترتبة ومتوسطة الصفحة */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -40,7 +37,7 @@ header {
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* حددت خط اللوجو وحجمه وشكله */
+
 header .title {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 500;
@@ -51,12 +48,12 @@ header .title {
     text-decoration: underline;
 }
 
-/* عشان النافبار يملأ الصفحة */
+
 nav {
     width: 100%;
 }
 
-/* شوية خصائص عادية */
+
 .navbar {
     list-style: none;
     align-items: center;
@@ -65,7 +62,7 @@ nav {
     margin: 0;
 }
 
-/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
+
 .navbar li a {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -80,7 +77,7 @@ nav {
     transition: 0.3s;
 }
 
-/* الهوفر ايفكتس */
+
 .navbar li a:hover,
 .navbar li a:focus {
     background-color: var(--color-forestroast);
@@ -134,7 +131,7 @@ nav {
     color: var(--color-almond);
 }
 
-/* زرار الدروب داون منيو */
+
 .dropbtn {
     background: transparent;
     border: none;
@@ -155,7 +152,7 @@ nav {
     position: relative;
 }
 
-/* الدروب داون منيو نفسها */
+
 .dropdown_content {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -176,7 +173,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* اللينكات جوا الدروب داون منيو */
+
 .dropdown_content a {
     padding: 12px 16px;
     text-decoration: none;
@@ -195,7 +192,7 @@ nav {
     visibility: visible;
 }
 
-/* كل ما يخص الفوتر */
+
 footer {
     display: flex;
     flex-direction: column;
@@ -256,14 +253,13 @@ footer .contact a:hover {
     color: #ffffff;
 }
 
-/*                     Home Page                    */
-/* ----------------------------------------------- */
+
 main {
     text-align: center;
     text-transform: capitalize;
 }
 
-/* محتوى الصفحة مترتب فوق بعضه */
+
 body {
     display: flex;
     flex-direction: column;
@@ -272,7 +268,7 @@ body {
     background-color: var(--color-forestfloor);
 }
 
-/* can be removed in other pages */
+
 .background_img {
     width: 100vw;
     height: 100vh;
@@ -424,7 +420,7 @@ p {
     }
 }
 
-/* tablet responsive design. */
+
 @media (max-width: 768px) {
 
     header {
@@ -559,7 +555,7 @@ p {
     }
 }
 
-/* mobile responsive design */
+
 @media (max-width: 480px) {
 
     header {
