@@ -24,8 +24,20 @@
 html,
 body {
     width: 100%;
+    min-height: 100vh;
 }
 
+.background_img {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(5px);
+    transform: scale(1.05);
+}
 
 /* خلي عناصر الهيدر مترتبة ومتوسطة الصفحة */
 header {

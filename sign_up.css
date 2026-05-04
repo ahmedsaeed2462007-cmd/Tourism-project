@@ -407,6 +407,7 @@ main {
     border-radius: 8px;
     font-size: 0.9rem;
     border: none;
+    outline: none;
     color: var(--color-matchabrew);
 }
 
@@ -596,6 +597,7 @@ main button:hover {
     footer .contact a {
         font-size: 1.2rem;
     }
+
 }
 
 /* mobile responsive design */
