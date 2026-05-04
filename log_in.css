@@ -112,6 +112,7 @@ nav {
     appearance: none;
     cursor: pointer;
 }
+
 #theme-selector,
 #bg-selector {
     outline: none;
@@ -487,7 +488,7 @@ main button:hover {
     }
 }
 
-}
+
 /* mobile responsive design */
 @media (max-width: 480px) {
 
