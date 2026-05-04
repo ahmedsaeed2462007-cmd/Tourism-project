@@ -66,7 +66,10 @@ nav {
     padding: 0 30px;
     margin: 0;
 }
-
+#theme-selector,
+#bg-selector {
+    outline: none;
+}
 /* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
 .navbar li a {
     font-family: "Work Sans", sans-serif;
