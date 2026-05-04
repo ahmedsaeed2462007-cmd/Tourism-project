@@ -91,6 +91,10 @@ nav {
     appearance: none;
     cursor: pointer;
 }
+#theme-selector,
+#bg-selector {
+    outline: none;
+}
 
 .visible_links select:hover,
 .visible_links select:focus {
