@@ -37,6 +37,10 @@ body {
     filter: blur(5px);
     transform: scale(1.05);
 }
+#theme-selector,
+#bg-selector {
+    outline: none;
+}
 
 /* خلي عناصر الهيدر مترتبة ومتوسطة الصفحة */
 header {
