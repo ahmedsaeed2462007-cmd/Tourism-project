@@ -1,13 +1,10 @@
-/*                  General Styles                  */
-/* ----------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* variable names for different colors */
-/* to choose a color write: "color: var(--color-almond)" */
 :root {
     --color-almond: #D6BD98;
     --color-matchabrew: #74ca7f;
@@ -26,8 +23,6 @@ body {
     width: 100%;
 }
 
-
-/* خلي عناصر الهيدر مترتبة ومتوسطة الصفحة */
 header {
     display: flex;
     justify-content: space-between;
@@ -43,7 +38,7 @@ header {
 #bg-selector {
     outline: none;
 }
-/* حددت خط اللوجو وحجمه وشكله */
+
 header .title {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 500;
@@ -54,12 +49,11 @@ header .title {
     text-decoration: underline;
 }
 
-/* عشان النافبار يملأ الصفحة */
 nav {
     width: 100%;
 }
 
-/* شوية خصائص عادية */
+
 .navbar {
     list-style: none;
     align-items: center;
@@ -68,7 +62,6 @@ nav {
     margin: 0;
 }
 
-/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
 .navbar li a {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -83,7 +76,6 @@ nav {
     transition: 0.3s;
 }
 
-/* الهوفر ايفكتس */
 .navbar li a:hover,
 .navbar li a:focus {
     background-color: var(--color-forestroast);
@@ -127,7 +119,6 @@ nav {
     color: var(--color-almond);
 }
 
-/* زرار الدروب داون منيو */
 .dropbtn {
     background: transparent;
     border: none;
@@ -148,7 +139,6 @@ nav {
     position: relative;
 }
 
-/* الدروب داون منيو نفسها */
 .dropdown_content {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -169,7 +159,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* اللينكات جوا الدروب داون منيو */
 .dropdown_content a {
     padding: 12px 16px;
     text-decoration: none;
@@ -188,7 +177,7 @@ nav {
     visibility: visible;
 }
 
-/* كل ما يخص الفوتر */
+
 footer {
     display: flex;
     flex-direction: column;
@@ -249,7 +238,7 @@ footer .contact a:hover {
     color: #ffffff;
 }
 
-/* End of General Styles */
+
 body {
     display: flex;
     flex-direction: column;
@@ -362,7 +351,7 @@ textarea:focus {
     border: green 3px solid;
 }
 
-/* tablet responsive design. */
+
 @media (max-width: 768px) {
 
     header {
@@ -454,14 +443,13 @@ textarea:focus {
         font-size: 1.2rem;
     }
 
-    /* End of general responsive */
     .form-body {
         margin: 20px;
         padding: 20px;
     }
 }
 
-/* mobile responsive design */
+
 @media (max-width: 480px) {
 
     header {
@@ -575,7 +563,7 @@ textarea:focus {
         font-size: 0.8rem;
     }
 
-    /* End of general responsive */
+    
     .form-body {
         padding: 20px;
     }
