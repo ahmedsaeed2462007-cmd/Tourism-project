@@ -87,6 +87,11 @@ nav {
     color: white;
 }
 
+.navbar audio {
+    margin: 10px;
+    width: 100px;
+}
+
 .visible_links {
     display: flex;
     margin-left: auto;
