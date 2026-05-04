@@ -580,7 +580,6 @@ main .country .distination .card .btn button:hover {
         font-size: 14px;
     }
 
-    /* Header */
     header {
         flex-direction: column;
         padding: 12px 15px;
@@ -627,6 +626,15 @@ main .country .distination .card .btn button:hover {
         border: 1.5px solid var(--color-almond);
     }
 
+    .visible_links select {
+        font-size: 0.65rem;
+        padding: 6px 8px;
+        margin: auto;
+        margin-top: 2px;
+        width: auto;
+        border: 1.5px solid var(--color-almond);
+    }
+
     .dropdown_content {
         top: 100%;
         left: 0;
@@ -650,6 +658,29 @@ main .country .distination .card .btn button:hover {
 
     .dropdown_content li {
         padding: 4px 10px;
+    }
+
+    footer {
+        padding: 12px 8px;
+        gap: 10px;
+    }
+
+    footer .social-icons {
+        gap: 15px;
+        padding: 8px 0;
+    }
+
+    footer .social-icons a {
+        font-size: 1.2rem;
+    }
+
+    footer .trademark {
+        font-size: 0.8rem;
+    }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 0.8rem;
     }
 
     /* Main content */
@@ -756,32 +787,6 @@ main .country .distination .card .btn button:hover {
         transform: scale(1.05);
     }
 
-
-    /* Footer for mobile */
-    footer {
-        font-size: 12px;
-        padding: 12px 8px;
-        gap: 10px;
-    }
-
-    footer .social-icons {
-        gap: 15px;
-        padding: 8px 0;
-    }
-
-    footer .social-icons a {
-        font-size: 1.2rem;
-    }
-
-    footer .trademark {
-        font-size: 0.8rem;
-    }
-
-    footer .contact p,
-    footer .contact a {
-        font-size: 0.8rem;
-    }
-}
 
 @media (max-width: 320px) {
     main .country .distination .card .pic {
