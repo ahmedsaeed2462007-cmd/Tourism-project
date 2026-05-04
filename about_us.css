@@ -82,16 +82,19 @@ nav {
     font-family: "Work Sans", sans-serif;
     font-weight: 500;
     font-size: 1rem;
+    text-align: center;
     width: 120px;
     margin-right: 10px;
-    padding: 9px 0px;
+    padding: 10px;
     color: var(--color-almond);
     background-color: transparent;
     border: 2px solid var(--color-almond);
     border-radius: 10px;
-    cursor: pointer;
-    outline: none;
     transition: 0.3s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
 }
 
 .visible_links select:hover,
@@ -475,8 +478,8 @@ h2 {
     }
 
     .visible_links select {
-        font-size: 0.6rem;
-        padding: 6px 0px;
+        font-size: 0.65rem;
+        padding: 6px 8px;
         margin: auto;
         margin-top: 2px;
         width: auto;
