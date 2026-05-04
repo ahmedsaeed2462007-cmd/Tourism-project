@@ -15,30 +15,29 @@
     --color-fernwhisper: #F5F5D3;
     --color-canopygreen: #798262;
     --color-deepwood: #33352C;
-    --color-green: #40534C;
 }
 
+html,
 body {
-    background-color: var(--color-almond);
-    font-family: "Work Sans", sans-serif;
-    color: var(--color-eclipse);
+    width: 100%;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
-/* ============ HEADER - matches index.html ============ */
+
+/* خلي عناصر الهيدر مترتبة ومتوسطة الصفحة */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #1A3636;
+    background-color: var(--color-eclipse);
     padding: 15px 40px;
+    margin-bottom: 20px;
     border-bottom: 4px solid var(--color-almond);
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* حددت خط اللوجو وحجمه وشكله */
 header .title {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 500;
@@ -49,10 +48,12 @@ header .title {
     text-decoration: underline;
 }
 
+/* عشان النافبار يملأ الصفحة */
 nav {
     width: 100%;
 }
 
+/* شوية خصائص عادية */
 .navbar {
     list-style: none;
     align-items: center;
@@ -64,13 +65,45 @@ nav {
 .visible_links {
     margin-left: auto;
     display: flex;
+    align-items: center;
     margin-right: 25px;
+}
+
+.visible_links select {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    width: 120px;
+    margin-right: 10px;
+    padding: 10px;
+    color: var(--color-almond);
+    background-color: transparent;
+    border: 2px solid var(--color-almond);
+    border-radius: 10px;
+    transition: 0.3s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.visible_links select:hover,
+.visible_links select:focus {
+    background-color: var(--color-forestroast);
+    color: white;
+}
+
+.visible_links select option {
+    background-color: var(--color-eclipse);
+    color: var(--color-almond);
 }
 
 .navbar li {
     margin: 0 10px;
 }
 
+/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
 .navbar li a {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -85,12 +118,14 @@ nav {
     transition: 0.3s;
 }
 
+/* الهوفر ايفكتس */
 .navbar li a:hover,
 .navbar li a:focus {
     background-color: var(--color-forestroast);
     color: white;
 }
 
+/* زرار الدروب داون منيو */
 .dropbtn {
     background: transparent;
     border: none;
@@ -107,30 +142,39 @@ nav {
     color: #ffffff;
 }
 
+/* ضرورية عشان يشتغل */
 .dropdown {
     position: relative;
 }
 
+/* الدروب داون منيو نفسها */
 .dropdown_content {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    /* ضرورية عشان المنيو تظهر كويس */
     position: absolute;
+    /* النسب دي مهمة جدا عشان تشتغل كويس */
     top: 100%;
     left: 0%;
+    /* عشان اظبط المكان الي هيظهر فيه */
     transform: translateX(-6%);
+    /* حجمه على الشاشة */
     min-width: 250px;
     padding: 15px 0;
     border-radius: 0 0 12px 12px;
     background-color: var(--color-eclipse);
     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.3);
+    /* ال زد دي هتخليه يظهر فوق اي حاجة عالصفحة */
     z-index: 1;
+    /* هيبقى مخفي لحد ما نعمل هوفر */
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
 }
 
+/* اللينكات جوا الدروب داون منيو */
 .dropdown_content a {
     padding: 12px 16px;
     text-decoration: none;
@@ -138,7 +182,6 @@ nav {
     display: block;
     width: 100%;
     margin: 15px 10px 0px 0px;
-    color: var(--color-almond);
 }
 
 .dropdown:hover .dropdown_content {
@@ -146,13 +189,13 @@ nav {
     visibility: visible;
 }
 
-/* ============ FOOTER - matches index.html ============ */
+/* كل ما يخص الفوتر */
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    background-color: #1A3636;
+    background-color: var(--color-eclipse);
     color: var(--color-almond);
     border-top: 4px solid var(--color-almond);
     margin-top: auto;
@@ -206,6 +249,7 @@ footer .contact a {
 footer .contact a:hover {
     color: #ffffff;
 }
+
 
 /* ============ MAIN CONTENT ============ */
 main {
