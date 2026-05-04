@@ -193,6 +193,67 @@ nav {
     visibility: visible;
 }
 
+/* كل ما يخص الفوتر */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--color-eclipse);
+    color: var(--color-almond);
+    border-top: 4px solid var(--color-almond);
+    margin-top: auto;
+    width: 100%;
+    padding: 30px 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer .trademark {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 550;
+    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.9);
+}
+
+footer .social-icons {
+    display: flex;
+    padding: 0px 10px 10px 10px;
+    gap: 20px;
+    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+footer .social-icons a {
+    color: var(--color-almond);
+    font-size: 1.7rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+footer .social-icons a:hover {
+    color: #ffffff;
+    transform: translateY(-5px);
+}
+
+footer .contact p {
+    font-size: 1.4rem;
+    font-weight: 550;
+    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.9);
+}
+
+footer .contact a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--color-earthydrift);
+    transition: all 0.3s ease;
+}
+
+footer .contact a:hover {
+    color: #ffffff;
+}
+
 body {
     display: flex;
     flex-direction: column;
