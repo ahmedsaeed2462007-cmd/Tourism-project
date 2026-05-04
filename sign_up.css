@@ -336,7 +336,12 @@ body {
 .nav-links li a:hover {
     color: #00d4ff;
 } */
-
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+}
 .container {
     display: flex;
     justify-content: center;
