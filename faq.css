@@ -1,13 +1,10 @@
-/*                  General Styles                  */
-/* ----------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* variable names for different colors */
-/* to choose a color write: "color: var(--color-almond)" */
+
 :root {
     --color-almond: #D6BD98;
     --color-matchabrew: #74ca7f;
@@ -27,7 +24,7 @@ body {
     min-height: 100vh;
 }
 
-/* خلي عناصر الهيدر مترتبة ومتوسطة الصفحة */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -40,7 +37,7 @@ header {
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* حددت خط اللوجو وحجمه وشكله */
+
 header .title {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 500;
@@ -51,7 +48,7 @@ header .title {
     text-decoration: underline;
 }
 
-/* عشان النافبار يملأ الصفحة */
+
 nav {
     width: 100%;
 }
@@ -60,7 +57,7 @@ nav {
     outline: none;
 }
 
-/* شوية خصائص عادية */
+
 .navbar {
     list-style: none;
     align-items: center;
@@ -69,7 +66,7 @@ nav {
     margin: 0;
 }
 
-/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
+
 .navbar li a {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -84,7 +81,7 @@ nav {
     transition: 0.3s;
 }
 
-/* الهوفر ايفكتس */
+
 .navbar li a:hover,
 .navbar li a:focus {
     background-color: var(--color-forestroast);
@@ -128,7 +125,7 @@ nav {
     color: var(--color-almond);
 }
 
-/* زرار الدروب داون منيو */
+
 .dropbtn {
     background: transparent;
     border: none;
@@ -149,7 +146,7 @@ nav {
     position: relative;
 }
 
-/* الدروب داون منيو نفسها */
+
 .dropdown_content {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -170,7 +167,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* اللينكات جوا الدروب داون منيو */
+
 .dropdown_content a {
     padding: 12px 16px;
     text-decoration: none;
@@ -189,7 +186,7 @@ nav {
     visibility: visible;
 }
 
-/* كل ما يخص الفوتر */
+
 footer {
     display: flex;
     flex-direction: column;
@@ -251,7 +248,7 @@ footer .contact a:hover {
 }
 
 
-/* ============ MAIN CONTENT ============ */
+
 main {
     flex: 1;
     padding: 0;
@@ -269,7 +266,7 @@ main {
     transform: scale(1.05);
 }
 
-/* Hero Section */
+
 .faq-hero {
     background-color: var(--color-green);
     background-repeat: no-repeat;
@@ -294,7 +291,7 @@ main {
     text-shadow: 5px 5px 100px var(--color-fernwhisper);
 }
 
-/* FAQ Container */
+
 .faq-container {
     max-width: 1000px;
     margin: 0 auto 40px;
@@ -385,7 +382,7 @@ main {
     line-height: 1.6;
 }
 
-/* FAQ Contact Section */
+
 .faq-contact {
     background: var(--color-green);
     color: var(--color-fernwhisper);
