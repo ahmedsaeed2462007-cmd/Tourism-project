@@ -569,6 +569,7 @@ main {
         width: 100%;
     }
 
+
     .navbar {
         position: relative;
         padding: 0;
@@ -582,7 +583,7 @@ main {
     .navbar li a {
         font-size: 0.7rem;
         padding: 6px 8px;
-        border: 1px solid var(--color-almond);
+        border: 1.5px solid var(--color-almond);
     }
 
     .visible_links {
@@ -592,9 +593,18 @@ main {
     }
 
     .visible_links li a {
-        font-size: 0.55rem;
+        font-size: 0.65rem;
         padding: 6px 8px;
-        border: 1px solid var(--color-almond);
+        border: 1.5px solid var(--color-almond);
+    }
+
+    .visible_links select {
+        font-size: 0.65rem;
+        padding: 6px 8px;
+        margin: auto;
+        margin-top: 2px;
+        width: auto;
+        border: 1.5px solid var(--color-almond);
     }
 
     .dropdown_content {
@@ -644,6 +654,7 @@ main {
     footer .contact a {
         font-size: 0.8rem;
     }
+
 
     .faq-hero {
         padding: 30px 15px;
