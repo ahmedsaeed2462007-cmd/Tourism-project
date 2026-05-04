@@ -29,7 +29,7 @@ submit.onclick = function (e) {
     if (check === false) {
         e.preventDefault();
     } else {
-        alert("Account Created Successfully!");
+        alert("The operation was completed successfully");
     }
 }
 
