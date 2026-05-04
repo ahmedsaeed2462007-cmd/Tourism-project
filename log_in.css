@@ -258,8 +258,6 @@ footer .contact a:hover {
 
 
 body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     background-color: var(--color-forestfloor);
 }
@@ -278,11 +276,16 @@ body {
 }
 
 /* End of general styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+}
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto auto 20px auto;
     /* height: 100vh; */
 }
 
