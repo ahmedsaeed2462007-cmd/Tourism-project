@@ -425,7 +425,7 @@ h2 {
     .navbar li a {
         font-size: 0.7rem;
         padding: 6px 8px;
-        border: 1px solid var(--color-almond);
+        border: 2px solid var(--color-almond);
     }
 
     .visible_links {
@@ -435,9 +435,9 @@ h2 {
     }
 
     .visible_links li a {
-        font-size: 0.55rem;
+        font-size: 0.65rem;
         padding: 6px 8px;
-        border: 1px solid var(--color-almond);
+        border: 2px solid var(--color-almond);
     }
 
     .dropdown_content {

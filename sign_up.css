@@ -248,49 +248,62 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    transform: translateY(100px);
+    /* height: 100vh; */
 }
 
 .glass-box {
     width: 90%;
     padding: 25px;
-    width: 90%;
-    padding: 25px;
     max-width: 350px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.15);
+    background: color-mix(in srgb, var(--color-eclipse) 50%, transparent);
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    color: var(--color-eclipse);
-}
-
-.glass-box p {
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-align: center;
+    transform: translateY(80px);
 }
 
 .glass-box h2 {
+    margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    color: var(--color-matchabrew);
+    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.3);
+}
+
+.glass-box p {
+    margin: 5px;
+    color: var(--color-matchabrew);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.3);
+}
+
+.glass-box a {
+    color: var(--color-fernwhisper);
+    text-decoration: none;
+    transition: all 0.3;
+}
+
+.glass-box a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .input-box {
     margin: 15px 0;
 }
 
-
 .input-box input {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: none;
     border-radius: 8px;
     outline: none;
-    font-size: 0.9rem;
-
+    font-size: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .input-boxS {
@@ -305,7 +318,7 @@ body {
     border-radius: 8px;
     font-size: 0.9rem;
     border: none;
-    color: var(--color-deepwood);
+    color: var(--color-matchabrew);
 }
 
 .input-boxS label {
@@ -320,10 +333,18 @@ body {
     color: var(--color-deepwood);
 }
 
-/* Button */
+input::placeholder {
+    color: #757575;
+}
+
+input:focus {
+    border: 2px solid #16d116;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
 main button {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 10px;
     border: none;
     border-radius: 8px;
@@ -331,24 +352,13 @@ main button {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.4s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
 }
 
 main button:hover {
+    cursor: pointer;
     background: var(--color-deepwood);
-}
-
-main p {
-    margin-bottom: 5px;
-}
-
-main a {
-    color: var(--color-fernwhisper);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .social-icons {
@@ -377,14 +387,16 @@ a:hover {
     background: white;
     color: #5E4B2B;
     transform: translateY(-5px);
+    text-decoration: none;
 }
 
+
 /* @media (max-width: 768px) {
-
-    .navbar {
-        padding: 15px 20px;
+    
+.navbar {
+    padding: 15px 20px;
     }
-
+    
     .nav-links {
         position: absolute;
         top: 60px;
@@ -510,7 +522,7 @@ a:hover {
     .navbar li a {
         font-size: 0.7rem;
         padding: 6px 8px;
-        border: 1px solid var(--color-almond);
+        border: 2px solid var(--color-almond);
     }
 
     .visible_links {
@@ -520,9 +532,9 @@ a:hover {
     }
 
     .visible_links li a {
-        font-size: 0.55rem;
+        font-size: 0.65rem;
         padding: 6px 8px;
-        border: 1px solid var(--color-almond);
+        border: 2px solid var(--color-almond);
     }
 
     .dropdown_content {

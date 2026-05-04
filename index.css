@@ -66,7 +66,6 @@ nav {
     margin: 0;
 }
 
-
 .visible_links {
     margin-left: auto;
     display: flex;
@@ -111,7 +110,6 @@ nav {
     align-items: center;
     justify-content: center;
 }
-
 
 .dropbtn:hover {
     color: #ffffff;
@@ -325,19 +323,14 @@ p {
     transition: all 0.3s;
 }
 
-.card-box div img {
-    transition: all 0.3s;
+.card-box img {
+    max-width: 260px;
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s;
 }
 
 .card-box .home-img1 {
     object-position: 10% 100%;
-}
-
-.card-box img {
-    max-width: 260px;
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.9);
-    transition: all 0.3s;
 }
 
 .card-box div:hover {
@@ -347,7 +340,6 @@ p {
 .card-box div img:hover {
     border: 3px solid white;
 }
-
 
 .card-box p {
     font-size: 1.2rem;
@@ -554,7 +546,7 @@ p {
     .navbar li a {
         font-size: 0.7rem;
         padding: 6px 8px;
-        border: 1px solid var(--color-almond);
+        border: 2px solid var(--color-almond);
     }
 
     .visible_links {
@@ -564,9 +556,9 @@ p {
     }
 
     .visible_links li a {
-        font-size: 0.55rem;
+        font-size: 0.65rem;
         padding: 6px 8px;
-        border: 1px solid var(--color-almond);
+        border: 2px solid var(--color-almond);
     }
 
     .dropdown_content {
