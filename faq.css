@@ -53,6 +53,10 @@ header .title {
 nav {
     width: 100%;
 }
+#theme-selector,
+#bg-selector {
+    outline: none;
+}
 
 /* شوية خصائص عادية */
 .navbar {
