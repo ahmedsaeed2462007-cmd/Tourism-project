@@ -414,6 +414,7 @@ main {
     border-radius: 8px;
     font-size: 0.9rem;
     border: none;
+    outline: none;
     color: var(--color-matchabrew);
 }
 
