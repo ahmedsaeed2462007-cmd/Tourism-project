@@ -520,6 +520,10 @@ main {
         font-size: 1.2rem;
     }
 
+    .faq-container {
+        margin: auto 10px;
+    }
+    
     .faq-hero {
         padding: 50px 20px;
     }
@@ -673,6 +677,7 @@ main {
     }
 
     .faq-container {
+        margin: auto 10px;
         padding: 0 10px;
     }
 
