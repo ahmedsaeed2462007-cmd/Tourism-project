@@ -603,6 +603,30 @@ main button:hover {
         padding: 4px 10px;
     }
 
+    footer {
+        padding: 12px 8px;
+        gap: 10px;
+    }
+
+    footer .social-icons {
+        gap: 15px;
+        padding: 8px 0;
+    }
+
+    footer .social-icons a {
+        font-size: 1.2rem;
+    }
+
+    footer .trademark {
+        font-size: 0.8rem;
+    }
+
+    footer .contact p,
+    footer .contact a {
+        font-size: 0.8rem;
+    }
+
+    
     .glass-box p {
         font-size: 1rem;
     }
