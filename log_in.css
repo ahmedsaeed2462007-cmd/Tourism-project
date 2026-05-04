@@ -366,14 +366,14 @@ main button:hover {
     background: var(--color-deepwood);
 }
 
-.social-icons {
+main .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
 }
 
-.social-icons a {
+main .social-icons a {
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.2);
@@ -388,7 +388,7 @@ main button:hover {
     text-decoration: none;
 }
 
-.social-icons a:hover {
+main .social-icons a:hover {
     background: white;
     color: #5E4B2B;
     transform: translateY(-5px);
