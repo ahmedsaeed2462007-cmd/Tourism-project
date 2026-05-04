@@ -21,7 +21,7 @@ bgSelector.addEventListener("change", function () {
 const themes = {
     'classic': {
         '--color-almond': '#D6BD98',
-        '--color-matchabrew': '#677D6A',
+        '--color-matchabrew': '#74ca7f',
         '--color-forestroast': '#399775',
         '--color-eclipse': '#1A3636',
         '--color-timberbreeze': '#4C2B12',
@@ -29,7 +29,7 @@ const themes = {
         '--color-earthydrift': '#BB8954',
         '--color-fernwhisper': '#F5F5D3',
         '--color-canopygreen': '#798262',
-        '--color-deepwood': '#33352C',
+        '--color-deepwood': '#236e45',
         '--color-green': '#40534C'
     },
     'midnight': {

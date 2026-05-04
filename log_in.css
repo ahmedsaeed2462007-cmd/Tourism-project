@@ -65,12 +65,34 @@ nav {
     margin: 0;
 }
 
+/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
+.navbar li a {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--color-almond);
+    padding: 10px;
+    border: 2px solid var(--color-almond);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* الهوفر ايفكتس */
+.navbar li a:hover,
+.navbar li a:focus {
+    background-color: var(--color-forestroast);
+    color: white;
+}
 
 .visible_links {
-    margin-left: auto;
     display: flex;
+    margin-left: auto;
     align-items: center;
     margin-right: 25px;
+    gap: 10px;
 }
 
 .visible_links select {
@@ -78,8 +100,7 @@ nav {
     font-weight: 500;
     font-size: 1rem;
     text-align: center;
-    width: 120px;
-    margin-right: 10px;
+    width: 130px;
     padding: 10px;
     color: var(--color-almond);
     background-color: transparent;
@@ -103,32 +124,6 @@ nav {
     color: var(--color-almond);
 }
 
-.navbar li {
-    margin: 0 10px;
-}
-
-/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
-.navbar li a {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1rem;
-    text-decoration: none;
-    color: var(--color-almond);
-    padding: 10px;
-    border: 2px solid var(--color-almond);
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-/* الهوفر ايفكتس */
-.navbar li a:hover,
-.navbar li a:focus {
-    background-color: var(--color-forestroast);
-    color: white;
-}
-
 /* زرار الدروب داون منيو */
 .dropbtn {
     background: transparent;
@@ -142,12 +137,10 @@ nav {
     justify-content: center;
 }
 
-
 .dropbtn:hover {
     color: #ffffff;
 }
 
-/* ضرورية عشان يشتغل */
 .dropdown {
     position: relative;
 }
@@ -158,22 +151,16 @@ nav {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    /* ضرورية عشان المنيو تظهر كويس */
     position: absolute;
-    /* النسب دي مهمة جدا عشان تشتغل كويس */
     top: 100%;
     left: 0%;
-    /* عشان اظبط المكان الي هيظهر فيه */
     transform: translateX(-6%);
-    /* حجمه على الشاشة */
     min-width: 250px;
-    padding: 15px 0;
+    padding: 15px 0px;
     border-radius: 0 0 12px 12px;
     background-color: var(--color-eclipse);
     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.3);
-    /* ال زد دي هتخليه يظهر فوق اي حاجة عالصفحة */
     z-index: 1;
-    /* هيبقى مخفي لحد ما نعمل هوفر */
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -187,6 +174,10 @@ nav {
     display: block;
     width: 100%;
     margin: 15px 10px 0px 0px;
+}
+
+.dropdown_content li {
+    padding: 0px 10px;
 }
 
 .dropdown:hover .dropdown_content {
@@ -255,8 +246,7 @@ footer .contact a:hover {
     color: #ffffff;
 }
 
-
-
+/* End of general styles */
 body {
     min-height: 100vh;
     background-color: var(--color-forestfloor);
@@ -282,6 +272,7 @@ main {
     align-items: center;
     margin-bottom: 300px;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -399,38 +390,6 @@ main button:hover {
     text-decoration: none;
 }
 
-/* @media (max-width: 768px) {
-
-    .navbar {
-        padding: 15px 20px;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        width: 200px;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 20px;
-        display: none;
-        border-radius: 10px 0 0 10px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 26px;
-        color: #5E4B3B;
-        cursor: pointer;
-    }
-} */
-
 /* tablet responsive design. */
 @media (max-width: 768px) {
 
@@ -522,20 +481,19 @@ main button:hover {
     footer .contact a {
         font-size: 1.2rem;
     }
+}
 
 
 /* mobile responsive design */
 @media (max-width: 480px) {
 
     header {
-        flex-direction: column;
         padding: 12px 15px;
         gap: 10px;
-        align-items: flex-start;
     }
 
     header .title {
-        font-size: 0.9rem;
+        font-size: 1rem;
         letter-spacing: 2px;
         margin: 0;
     }
@@ -546,6 +504,7 @@ main button:hover {
 
 
     .navbar {
+        flex-wrap: wrap;
         position: relative;
         padding: 0;
         gap: 3px;
@@ -562,23 +521,32 @@ main button:hover {
     }
 
     .visible_links {
-        gap: 5px;
+        gap: 8px;
         flex-wrap: wrap;
+        justify-content: center;
         margin-bottom: 5px;
+        margin-top: 5px;
+        width: 100%;
     }
 
-    .visible_links li a {
-        font-size: 0.65rem;
+    .visible_links select,
+    .visible_links li {
+        flex: 1 1 45%;
+        max-width: 160px;
+        margin: 0;
+    }
+
+    .visible_links select {
+        font-size: 0.7rem;
         padding: 6px 8px;
         border: 1.5px solid var(--color-almond);
     }
 
-    .visible_links select {
-        font-size: 0.65rem;
+    .visible_links li a {
+        display: block;
+        text-align: center;
+        font-size: 0.7 rem;
         padding: 6px 8px;
-        margin: auto;
-        margin-top: 2px;
-        width: auto;
         border: 1.5px solid var(--color-almond);
     }
 
@@ -630,7 +598,7 @@ main button:hover {
         font-size: 0.8rem;
     }
 
-    
+
     .glass-box p {
         font-size: 1rem;
     }
