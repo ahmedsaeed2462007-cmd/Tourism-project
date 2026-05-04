@@ -126,6 +126,10 @@ nav {
     background-color: var(--color-eclipse);
     color: var(--color-almond);
 }
+#theme-selector,
+#bg-selector {
+    outline: none;
+}
 
 /* زرار الدروب داون منيو */
 .dropbtn {
