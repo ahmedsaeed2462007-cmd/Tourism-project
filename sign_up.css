@@ -717,3 +717,8 @@ main button:hover {
         font-size: 1rem;
     }
 }
+
+#theme-selector,
+#bg-selector {
+    outline: none;
+}
