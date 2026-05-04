@@ -8,6 +8,7 @@ let submit = document.getElementById('submit');
 let DELETEALL = document.getElementById('DELETEALL');
 let emailError = document.getElementById('emailError');
 let phoneError = document.getElementById('phoneError');
+let tbody = document.getElementById('tbody');
 let tmp;
 let mood = 'create';
 let array;
@@ -23,25 +24,25 @@ if (submit) {
     submit.onclick = function (e) {
         // منع الصفحة من التحميل في كل الأحوال عشان نتحكم في الفحص
         e.preventDefault();
-
-        if (name.value != '' && email.value != '' && phone.value != '' && destination.value != '' && go.value != '' && returne.value != '') {
+        let isEmailValid = (mood === 'create') ? (email.value != '') : true;
+        if (name.value != '' && isEmailValid && phone.value != '' && destination.value != '' && go.value != '' && returne.value != '') {
 
             emailError.style.display = 'none';
             phoneError.style.display = 'none';
             let check = true;
-            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            // 1. الفحص (Validation)
-            if (email.value === "") {
-                emailError.textContent = "Email is required";
-                emailError.style.display = 'block';
-                check = false;
-            } else if (!emailPattern.test(email.value)) {
-                emailError.textContent = "Please enter a valid email";
-                emailError.style.display = 'block';
-                check = false;
+            if (mood === 'create') {
+                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                // 1. الفحص (Validation)
+                if (email.value === "") {
+                    emailError.textContent = "Email is required";
+                    emailError.style.display = 'block';
+                    check = false;
+                } else if (!emailPattern.test(email.value)) {
+                    emailError.textContent = "Please enter a valid email(@gamil.com)";
+                    emailError.style.display = 'block';
+                    check = false;
+                }
             }
-
             if (phone.value === "") {
                 phoneError.textContent = "Phone number is required";
                 phoneError.style.display = 'block';
@@ -59,7 +60,9 @@ if (submit) {
                     phone: phone.value,
                     destination: destination.value,
                     go: go.value,
-                    returne: returne.value
+                    returne: returne.value,
+                    // نحافظ على الإيميل القديم إذا كنا في وضع التعديل
+                    email: (mood === 'create') ? email.value : array[tmp].email
                 }
 
                 if (mood === 'create') {
@@ -69,6 +72,7 @@ if (submit) {
                     mood = 'create';
                     submit.innerHTML = 'Book now';
                     email.style.display = 'block';
+                    submit.style.background = "";
                 }
 
                 localStorage.setItem('stor', JSON.stringify(array));
@@ -141,6 +145,7 @@ function updateData(i) {
     go.value = array[i].go;
     returne.value = array[i].returne;
     submit.innerHTML = 'Update';
+    submit.style.background = "#008000";
     mood = 'update';
     email.style.display = 'none';
     tmp = i;
