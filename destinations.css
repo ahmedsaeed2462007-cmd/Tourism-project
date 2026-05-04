@@ -60,10 +60,10 @@ nav {
     margin: 0;
 }
 
-
 .visible_links {
     margin-left: auto;
     display: flex;
+    align-items: center;
     margin-right: 25px;
 }
 
@@ -614,7 +614,7 @@ footer .contact a:hover {
     .navbar li a {
         font-size: 0.7rem;
         padding: 6px 8px;
-        border: 2px solid var(--color-almond);
+        border: 1.5px solid var(--color-almond);
     }
 
     .visible_links {
@@ -626,7 +626,7 @@ footer .contact a:hover {
     .visible_links li a {
         font-size: 0.65rem;
         padding: 6px 8px;
-        border: 2px solid var(--color-almond);
+        border: 1.5px solid var(--color-almond);
     }
 
     .dropdown_content {

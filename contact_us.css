@@ -65,11 +65,38 @@ nav {
     margin: 0;
 }
 
-
 .visible_links {
     margin-left: auto;
     display: flex;
+    align-items: center;
     margin-right: 25px;
+}
+
+.visible_links select {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    width: 120px;
+    margin-right: 10px;
+    padding: 9px 0px;
+    color: var(--color-almond);
+    background-color: transparent;
+    border: 2px solid var(--color-almond);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.visible_links select:hover,
+.visible_links select:focus {
+    background-color: var(--color-forestroast);
+    color: white;
+}
+
+.visible_links select option {
+    background-color: var(--color-eclipse);
+    color: var(--color-almond);
 }
 
 .navbar li {
@@ -410,6 +437,13 @@ textarea:focus {
         padding: 8px 12px;
     }
 
+    .visible_links select {
+        font-size: 0.85rem;
+        margin: auto;
+        width: 100px;
+        padding: 8px 0px;
+    }
+
     .dropbtn {
         padding: 10px;
     }
@@ -457,21 +491,6 @@ textarea:focus {
         margin: 20px;
         padding: 20px;
     }
-
-    /* .description {
-        padding: 15px;
-        padding-right: 25px;
-        padding-left: 25px;
-        background-color: var(--color-eclipse);
-    }
-
-    .description h1 {
-        font-size: 1.7rem;
-    }
-
-    .description p {
-        font-size: 1.3rem;
-    } */
 }
 
 /* mobile responsive design */
@@ -508,7 +527,7 @@ textarea:focus {
     .navbar li a {
         font-size: 0.7rem;
         padding: 6px 8px;
-        border: 2px solid var(--color-almond);
+        border: 1.5px solid var(--color-almond);
     }
 
     .visible_links {
@@ -520,7 +539,16 @@ textarea:focus {
     .visible_links li a {
         font-size: 0.65rem;
         padding: 6px 8px;
-        border: 2px solid var(--color-almond);
+        border: 1.5px solid var(--color-almond);
+    }
+
+    .visible_links select {
+        font-size: 0.6rem;
+        padding: 6px 0px;
+        margin: auto;
+        margin-top: 2px;
+        width: auto;
+        border: 1.5px solid var(--color-almond);
     }
 
     .dropdown_content {

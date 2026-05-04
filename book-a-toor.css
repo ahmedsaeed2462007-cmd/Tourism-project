@@ -69,11 +69,38 @@ nav {
     margin: 0;
 }
 
-
 .visible_links {
     margin-left: auto;
     display: flex;
+    align-items: center;
     margin-right: 25px;
+}
+
+.visible_links select {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    width: 120px;
+    margin-right: 10px;
+    padding: 9px 0px;
+    color: var(--color-almond);
+    background-color: transparent;
+    border: 2px solid var(--color-almond);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.visible_links select:hover,
+.visible_links select:focus {
+    background-color: var(--color-forestroast);
+    color: white;
+}
+
+.visible_links select option {
+    background-color: var(--color-eclipse);
+    color: var(--color-almond);
 }
 
 .navbar li {
@@ -289,6 +316,13 @@ main {
         padding: 8px 12px;
     }
 
+    .visible_links select {
+        font-size: 0.85rem;
+        margin: auto;
+        width: 100px;
+        padding: 8px 0px;
+    }
+
     .dropbtn {
         padding: 10px;
     }
@@ -366,7 +400,7 @@ main {
     .navbar li a {
         font-size: 0.7rem;
         padding: 6px 8px;
-        border: 2px solid var(--color-almond);
+        border: 1.5px solid var(--color-almond);
     }
 
     .visible_links {
@@ -378,7 +412,16 @@ main {
     .visible_links li a {
         font-size: 0.65rem;
         padding: 6px 8px;
-        border: 2px solid var(--color-almond);
+        border: 1.5px solid var(--color-almond);
+    }
+
+    .visible_links select {
+        font-size: 0.6rem;
+        padding: 6px 0px;
+        margin: auto;
+        margin-top: 2px;
+        width: auto;
+        border: 1.5px solid var(--color-almond);
     }
 
     .dropdown_content {
@@ -462,8 +505,8 @@ form {
     font-weight: 700;
 }
 
-input,
-select {
+.content input,
+.content select {
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -473,17 +516,17 @@ select {
     font-weight: 600;
 }
 
-input::placeholder {
+.content input::placeholder {
     color: #757575;
 }
 
-input:hover,
-select:hover {
+.content input:hover,
+.content select:hover {
     border: 2px solid #b0bbc1;
 }
 
-input:focus,
-select:focus {
+.content input:focus,
+.content select:focus {
     border: 2px solid #16d116;
     box-shadow: 0 0 8px rgba(68, 176, 11, 0.2);
 }
@@ -520,8 +563,8 @@ form button:hover {
         width: 300px;
     }
 
-    input,
-    select {
+    .content input,
+    .content select {
         width: 250px;
         transform: translateX(-15px);
     }

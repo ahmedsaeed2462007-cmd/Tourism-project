@@ -19,7 +19,7 @@
 <body>
     <header>
         <nav>
-            <ul class="navbar">
+            <div class="navbar">
                 <div class="dropdown">
                     <button class="dropbtn">
                         <!-- ده عبارة عن علامة الثلاثة شرط الهي الدروب داون منيو -->
@@ -34,6 +34,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="destinations.html">Destinations</a></li>
                         <li><a href="book-a-toor.html">Book A Tour</a></li>
+                        <!-- <li><a href="my-bookings.html">My Bookings</a></li> -->
                         <li><a href="">FAQ</a></li>
                         <li><a href="contact_us.html">Customer Support</a></li>
                         <li><a href="about_us.html">About Us</a></li>
@@ -45,14 +46,22 @@
                 </li>
                 <!-- اللينكات الي مش هتدخل في الدروب داون -->
                 <div class="visible_links">
+
+                    <select id="bg-selector">
+                        <option value="media/Istanbul City.jpg">Istanbul</option>
+                        <option value="media/spain mansion.jpg">Spain</option>
+                        <option value="media/green city.jpg">Forest</option>
+                        <option value="media/spain nature.jpg">Sunset</option>
+                    </select>
+
                     <li><a href="log_in.html">Log In</a></li>
                     <li><a href="sign_up.html">Sign Up</a></li>
                     <!-- <li><a href="">Account</a></li> -->
                 </div>
-            </ul>
+            </div>
         </nav>
     </header>
-    <img src="media/Istanbul City.jpg" alt="background_img" class="background_img">
+    <img src="media/Istanbul City.jpg" alt="background_img" class="background_img" id="main-bg">
     <div class="content">
         <div class="h-form">
             <h1 style="color:#032030">Discover the beauty of the world with us</h1>
@@ -115,6 +124,7 @@
         <p class="trademark">&copy; Travella inc. 2026 All Rights Reserved</p>
     </footer>
     <script src="Book.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

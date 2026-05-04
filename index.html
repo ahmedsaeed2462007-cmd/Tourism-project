@@ -45,6 +45,14 @@
                 </li>
                 <!-- اللينكات الي مش هتدخل في الدروب داون -->
                 <div class="visible_links">
+
+                    <select id="bg-selector">
+                        <option value="media/Istanbul City.jpg">Istanbul</option>
+                        <option value="media/spain mansion.jpg">Spain</option>
+                        <option value="media/green city.jpg">Forest</option>
+                        <option value="media/spain nature.jpg">Sunset</option>
+                    </select>
+
                     <li><a href="log_in.html">Log In</a></li>
                     <li><a href="sign_up.html">Sign Up</a></li>
                     <!-- <li><a href="">Account</a></li> -->
@@ -53,7 +61,7 @@
         </nav>
     </header>
     <main>
-        <img src="media/Istanbul City.jpg" alt="background_img" class="background_img">
+        <img src="media/Istanbul City.jpg" alt="background_img" class="background_img" id="main-bg">
         <article class="art1">
             <p class="description1">Welcome To The Best Travelling Hub In The Middle-East:
                 <span><strong>Travella</strong></span>
@@ -107,6 +115,7 @@
         </div>
         <p class="trademark">&copy; Travella inc. 2026 All Rights Reserved</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
