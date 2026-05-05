@@ -1,13 +1,9 @@
-/*                  General Styles                  */
-/* ----------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* variable names for different colors */
-/* to choose a color write: "color: var(--color-almond)" */
 :root {
     --color-almond: #D6BD98;
     --color-matchabrew: #74ca7f;
@@ -26,8 +22,6 @@ body {
     width: 100%;
 }
 
-
-/* خلي عناصر الهيدر مترتبة ومتوسطة الصفحة */
 header {
     display: flex;
     justify-content: space-between;
@@ -40,7 +34,6 @@ header {
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* حددت خط اللوجو وحجمه وشكله */
 header .title {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 500;
@@ -51,12 +44,10 @@ header .title {
     text-decoration: underline;
 }
 
-/* عشان النافبار يملأ الصفحة */
 nav {
     width: 100%;
 }
 
-/* شوية خصائص عادية */
 .navbar {
     list-style: none;
     align-items: center;
@@ -65,7 +56,6 @@ nav {
     margin: 0;
 }
 
-/* ده كل ما يخص التيكست بتاع اللينكس جوا النافبار */
 .navbar li a {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -80,7 +70,6 @@ nav {
     transition: 0.3s;
 }
 
-/* الهوفر ايفكتس */
 .navbar li a:hover,
 .navbar li a:focus {
     background-color: var(--color-forestroast);
@@ -124,7 +113,6 @@ nav {
     color: var(--color-almond);
 }
 
-/* زرار الدروب داون منيو */
 .dropbtn {
     background: transparent;
     border: none;
@@ -145,7 +133,6 @@ nav {
     position: relative;
 }
 
-/* الدروب داون منيو نفسها */
 .dropdown_content {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -166,7 +153,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* اللينكات جوا الدروب داون منيو */
 .dropdown_content a {
     padding: 12px 16px;
     text-decoration: none;
@@ -185,7 +171,6 @@ nav {
     visibility: visible;
 }
 
-/* كل ما يخص الفوتر */
 footer {
     display: flex;
     flex-direction: column;
@@ -254,7 +239,6 @@ body {
     background-color: var(--color-forestfloor);
 }
 
-/* can be removed in other pages */
 .background_img {
     width: 100vw;
     height: 100vh;
@@ -267,67 +251,6 @@ body {
     transform: scale(1.05);
 }
 
-/*
-body {
-    height: 100vh;
-    background: url('media/Istanbul City.jpg') no-repeat center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 80px;
-}
-
-.navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: rgba(255, 255, 255, 0.082);
-    backdrop-filter: blur(10px);
-}
-
-.logo {
-    color: #5E4B2B;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #6B7B84;
-    font-size: 15px;
-    position: relative;
-    transition: 0.3s;
-}
-
-.nav-links li a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: -5px;
-    background: #2D4530;
-    transition: 0.3s;
-}
-
-.nav-links li a:hover::after {
-    width: 100%;
-}
-
-.nav-links li a:hover {
-    color: #00d4ff;
-} */
 main {
     display: flex;
     justify-content: center;
@@ -339,7 +262,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
 }
 
 .glass-box {
@@ -480,33 +402,6 @@ main button:hover {
     text-decoration: none;
 }
 
-
-/* @media (max-width: 768px) {
-    
-.navbar {
-    padding: 15px 20px;
-    }
-    
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        width: 200px;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 20px;
-        display: none;
-        border-radius: 10px 0 0 10px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-} */
-
-/* tablet responsive design. */
 @media (max-width: 768px) {
 
     header {
@@ -600,7 +495,7 @@ main button:hover {
 
 }
 
-/* mobile responsive design */
+
 @media (max-width: 480px) {
 
     header {

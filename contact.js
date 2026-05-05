@@ -6,12 +6,12 @@ let submit = document.getElementById('submit');
 let emailError = document.getElementById('emailError');
 let phoneError = document.getElementById('phoneError');
 submit.onclick = function (e) {
-    // إعادة تعيين الرسايل (عشان لو الخطأ اتصلح تختفي)
+    
     emailError.style.display = 'none';
     phoneError.style.display = 'none';
     let check = true;
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // check email
+    
     if (email.value === "") {
         emailError.textContent = "Email is required";
         emailError.style.display = 'block';
@@ -22,7 +22,7 @@ submit.onclick = function (e) {
         emailError.style.display = 'block';
         check = false;
     }
-    // check phone
+    
     if (phone.value === "") {
         phoneError.textContent = "Phone number is required";
         phoneError.style.display = 'block';

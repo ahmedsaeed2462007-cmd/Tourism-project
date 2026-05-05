@@ -16,8 +16,6 @@ bgSelector.addEventListener("change", function () {
     localStorage.setItem("userBackground", newImage);
 });
 
-// ===== THEME SWITCHER =====
-// الثيمات المتاحة
 const themes = {
     'classic': {
         '--color-almond': '#D6BD98',
@@ -47,7 +45,6 @@ const themes = {
     }
 };
 
-// تطبيق الثيم على الصفحة
 function applyTheme(themeName) {
     const theme = themes[themeName];
     if (!theme) return;
@@ -57,19 +54,15 @@ function applyTheme(themeName) {
     });
 }
 
-// عند تحميل الصفحة: تحقق من الثيم المحفوظ وطبقه
 const savedTheme = localStorage.getItem('userTheme') || 'classic';
 applyTheme(savedTheme);
 
-// بعد تحميل الـ DOM: اضبط قيمة الـ select وأضف الـ event listener
 document.addEventListener('DOMContentLoaded', function () {
     const themeSelector = document.getElementById('theme-selector');
     if (!themeSelector) return;
 
-    // اضبط قيمة الـ select على الثيم المحفوظ
     themeSelector.value = savedTheme;
 
-    // استمع لتغيير الاختيار
     themeSelector.addEventListener('change', function () {
         const selectedTheme = themeSelector.value;
         applyTheme(selectedTheme);
