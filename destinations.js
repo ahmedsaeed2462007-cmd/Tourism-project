@@ -1,4 +1,3 @@
-
 var programMap = {
     "Cairo Classic Journey":  "egypt-cairo",
     "Kings of the Nile":      "egypt-kings",
