@@ -1,0 +1,66 @@
+main {
+    padding:20px;
+    height: 70vh;
+    background-color: rgb(202, 196, 196);
+    width: 100%;
+}
+.hp{
+    width: 70%;
+}
+.all {
+    max-width: 1200;
+    display: flex;
+    justify-content: center;
+}
+
+.hp h1 {
+    color: var(--color-eclipse);
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.per-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.per-info h3 {
+    color: var(--color-deepwood);
+    border-bottom: 2px solid var(--color-matchabrew);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logon i {
+    font-size: 100px;
+}
+
+.details p {
+    margin: 12px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.details strong {
+    display: inline-block;
+    width: 100px;
+    color: var(--color-eclipse);
+}
+@media(max-width:700px)
+{
+    .left{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}

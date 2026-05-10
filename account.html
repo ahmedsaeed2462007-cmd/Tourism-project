@@ -3,18 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link href="account.css" rel="stylesheet">
+    <link href="general.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking - Travella</title>
-    <link href="book-a-toor.css" rel="stylesheet">
-    <link rel="stylesheet" href="general.css">
 </head>
 
 <body>
@@ -59,7 +54,6 @@
                         <option value="classic">Dark Forest</option>
                         <option value="midnight">Warm Desert</option>
                     </select>
-
                     <li><a href="sign_up.html">Sign Up</a></li>
                     <li><a href="account.html">Account</a></li>
 
@@ -67,56 +61,27 @@
             </div>
         </nav>
     </header>
-    <img src="media/Istanbul City.jpg" alt="background_img" class="background_img" id="main-bg">
-    <div class="content">
-        <div class="h-form">
-            <h1 style="color:#032030">Discover the beauty of the world with us</h1>
-            <form>
-                <input required placeholder="Full Name" name="name" type="text" id="name">
-                <input required placeholder="Email Address" name="Email" type="email" id="email">
-                <div id="emailError" style="color: red;font-size: 20px;display: none;"></div>
-                <input required placeholder="Phone Number" name="Phone" type="tel" id="phone" maxlength="11">
-                <div id="phoneError" style="color: red; font-size: 20px; display: none;"></div>
-                <label for="destination">Destination</label>
-                <select id="destination">
-                    <option value="Cairo Classic Journey">Cairo Classic Journey</option>
-                    <option value="Kings of the Nile">Kings of the Nile</option>
-                    <option value="Red Sea Adventure">Red Sea Adventure</option>
-                    <option value="Istanbul Splendor">Istanbul Splendor</option>
-                    <option value="Cappadocia Adventure">Cappadocia Adventure</option>
-                    <option value="Turquoise Coast">Turquoise Coast</option>
-                    <option value="Cultural Escape">Cultural Escape</option>
-                    <option value="Andalusia Adventure">Andalusia Adventure</option>
-                    <option value="Costa del Sol">Costa del Sol</option>
-                </select>
-                <label for="go">Departure Dates</label>
-                <input id="go" name="Departure" required type="date">
-                <label for="return">Return Dates</label>
-                <input id="return" name="Return" required type="date">
-                <button id="submit">Book now</button>
-            </form>
+    <main>
+        <div class="all">
+            <div class="hp">
+                <img src="media/Istanbul City.jpg" alt="background_img" class="background_img" id="main-bg">
+                <h1 id="welcome-msg">Welcome !</h1>
+                <div class="per-info">
+                    <h3>Personal Inforamtion</h3>
+                    <div class="left">
+                        <div class="logon"><i class="fa-solid fa-circle-user" style="color: rgb(116, 192, 252);"></i>
+                        </div>
+                        <div class="details">
+                            <p><strong>Name</strong> <span id="acc-name"></span></p>
+                            <p><strong>Email</strong> <span id="acc-email"></span></p>
+                            <p><strong>Password</strong> <span id="acc-pass"></span></p>
+                            <p><strong>Address</strong> <span id="acc-country"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="table">
-        <div id="DELETEALL"></div>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Destination</th>
-                    <th>Go</th>
-                    <th>Return</th>
-                    <th>Update</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody id="tbody">
-
-            </tbody>
-        </table>
-    </div>
+    </main>
     <footer>
         <div class="social-icons">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -129,8 +94,8 @@
         </div>
         <p class="trademark">&copy; Travella inc. 2026 All Rights Reserved</p>
     </footer>
-    <script src="Book.js"></script>
     <script src="index.js"></script>
+    <script src="account.js"></script>
 </body>
 
 </html>
