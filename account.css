@@ -1,6 +1,6 @@
 main {
     padding: 20px;
-    height: 70vh;
+    height: auto;
     width: 100%;
 }
 
@@ -9,24 +9,27 @@ main {
 }
 
 .all {
+    color: var(--color-deepwood);
     max-width: 1200;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
 }
 
-.hp h1 {
-    color: var(--color-deepwood);
-    margin-bottom: 25px;
-    font-size: 2.2rem;
+.all h1{
     text-align: center;
 }
 
 .per-info {
     background-color: #fff;
-    padding: 30px;
+    padding: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .per-info h3 {
@@ -36,20 +39,24 @@ main {
     margin-bottom: 25px;
 }
 
+.logon{
+    text-align: center;
+}
+
+.logon i {
+    font-size: 5rem;
+}
+
 .left {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-.logon i {
-    font-size: 100px;
-}
-
 .details p {
     margin: 12px 0;
     font-size: 1.1rem;
-    color: #333;
+    color: var(--color-green);
 }
 
 .details strong {
@@ -63,5 +70,14 @@ main {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+    }
+}
+
+@media(max-width:426px){
+    .logon i{
+        font-size: 4rem;
+    }
+    .details {
+        font-size: 15px;
     }
 }
