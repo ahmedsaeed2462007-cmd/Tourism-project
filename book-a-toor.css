@@ -30,7 +30,7 @@ form {
 }
 
 .h-form h1 {
-    color: #09571b;
+    color: var(--color-deepwood);
     margin-bottom: 20px;
     text-align: center;
     text-transform: capitalize;
@@ -60,13 +60,13 @@ form {
 
 .content input:focus,
 .content select:focus {
-    border: 2px solid #16d116;
+    border: 2px solid var(--color-matchabrew);
     box-shadow: 0 0 8px rgba(68, 176, 11, 0.2);
 }
 
 label {
     font-size: 18px;
-    color: rgb(125, 195, 20);
+    color: var(--color-matchabrew);
     font-weight: 550;
     margin-bottom: 8px;
     text-align: left;
@@ -79,22 +79,23 @@ form button {
     border: none;
     margin-bottom: 20px;
     outline: none;
-    background-color: #44b00b;
+    background-color: var(--color-matchabrew);
     font-size: 22px;
     font-weight: 500;
     cursor: pointer;
     width: 100%;
     color: white;
+    transition: all ease 0.3s;
 }
 
 form button:hover {
-    background-color: #128221;
+    background-color: var(--color-deepwood);
 }
 
 
 .table {
     padding: 3%;
-    background-color: #255252;
+    background-color: var(--color-green);
     overflow-x: auto;
 }
 
@@ -108,7 +109,7 @@ table td {
 }
 
 table tbody tr td .upd {
-    background-color: green;
+    background-color: var(--color-matchabrew);
     color: white;
     border: none;
     padding: 4px;
@@ -119,8 +120,8 @@ table tbody tr td .upd {
 }
 
 table tbody tr td .upd:hover {
-    background-color: rgb(14, 186, 14);
-    transform: scale(1.1);
+    background-color: var(--color-deepwood);
+    transform: scale(1.05);
 }
 
 table tbody tr td .del {
@@ -137,40 +138,35 @@ table tbody tr td .del {
 
 table tbody tr td .del:hover {
     background-color: rgb(197, 34, 34);
-    transform: scale(1.1);
-}
-
-.DELETEALL {
-    width: 100%;
-    height: 30px;
+    transform: scale(1.05);
 }
 
 .delall {
+    width: 60%;
     margin: auto;
-    width: 70%;
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 10px;
     color: white;
+    background-color: rgb(186, 46, 46);
     border: none;
     outline: none;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-size: 20px;
     font-weight: 800;
     cursor: pointer;
-    background-color: rgb(136, 31, 31);
     transition: 0.5s;
 }
 
 .delall:hover {
-    background-color: rgb(186, 46, 46);
-    transform: scale(1.1);
+    background-color: rgb(136, 31, 31);
+    transform: scale(1.05);
 }
 
 
-@media (max-width:400px) {
+@media (max-width:480px) {
     .h-form {
         width: 300px;
     }

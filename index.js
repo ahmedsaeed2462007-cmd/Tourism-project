@@ -28,7 +28,7 @@ const themes = {
         '--color-fernwhisper': '#F5F5D3',
         '--color-canopygreen': '#798262',
         '--color-deepwood': '#236e45',
-        '--color-green': '#40534C'
+        '--color-green': '#355449'
     },
     'midnight': {
         '--color-almond': '#F0E6D3',
@@ -40,7 +40,7 @@ const themes = {
         '--color-earthydrift': '#E8C27A',
         '--color-fernwhisper': '#FDF6EC',
         '--color-canopygreen': '#8B5E3C',
-        '--color-deepwood': '#2C1A0E',
+        '--color-deepwood': '#6a3a1a',
         '--color-green': '#7A4F2E'
     }
 };
