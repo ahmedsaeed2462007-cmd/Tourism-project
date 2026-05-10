@@ -1,11 +1,13 @@
 main {
-    padding:20px;
+    padding: 20px;
     height: 70vh;
     width: 100%;
 }
-.hp{
+
+.hp {
     width: 70%;
 }
+
 .all {
     max-width: 1200;
     display: flex;
@@ -13,7 +15,7 @@ main {
 }
 
 .hp h1 {
-    color: var(--color-eclipse);
+    color: var(--color-deepwood);
     margin-bottom: 25px;
     font-size: 2.2rem;
     text-align: center;
@@ -55,9 +57,9 @@ main {
     width: 100px;
     color: var(--color-eclipse);
 }
-@media(max-width:700px)
-{
-    .left{
+
+@media(max-width:700px) {
+    .left {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
