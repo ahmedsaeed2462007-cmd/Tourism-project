@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link href="account.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <!-- ده عبارة عن علامة الثلاثة شرط الهي الدروب داون منيو -->
+                        <svg viewBox="0 0 100 80" width="30" height="30" fill="currentColor">
+                            <rect width="100" height="15" rx="8"></rect>
+                            <rect y="30" width="100" height="15" rx="8"></rect>
+                            <rect y="60" width="100" height="15" rx="8"></rect>
+                        </svg>
+                    </button>
+                    <!-- ديه اللينكات الي جوا الدروب داون -->
+                    <div class="dropdown_content">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="book-a-toor.html">Book A Tour</a></li>
+                        <!-- <li><a href="my-bookings.html">My Bookings</a></li> -->
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact_us.html">Customer Support</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                    </div>
+                </div>
+                <!-- اللوجو بتاع الموقع -->
+                <a href="index.html" class="title-link">
+                    <h1 class="title">Travella</h1>
+                </a>
+                <!-- اللينكات الي مش هتدخل في الدروب داون -->
+                <div class="visible_links">
+
+                    <select id="bg-selector">
+                        <option value="media/Istanbul City.jpg">Istanbul</option>
+                        <option value="media/spain mansion.jpg">Spain</option>
+                        <option value="media/green city.jpg">Forest</option>
+                        <option value="media/spain nature.jpg">Sunset</option>
+                    </select>
+
+                    <select id="theme-selector">
+                        <option value="classic">Dark Forest</option>
+                        <option value="midnight">Warm Desert</option>
+                    </select>
+
+                    <li><a href="sign_up.html">Sign Up</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="all">
+            <div class="hp">
+                <h1 id="welcome-msg">Welcome!</h1>
+                <div class="per-info">
+                    <h3>Personal Inforamtion</h3>
+                    <div class="left">
+                        <div class="logon"><i class="fa-solid fa-circle-user" style="color: rgb(116, 192, 252);"></i>
+                        </div>
+                        <div class="details">
+                            <p><strong>Name</strong> <span id="acc-name"></span></p>
+                            <p><strong>Email</strong> <span id="acc-email"></span></p>
+                            <p><strong>Password</strong> <span id="acc-pass"></span></p>
+                            <p><strong>Address</strong> <span id="acc-country"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="contact">
+            <p>Contact Us: <a href="contact_us.html">Travella.inc@gmail.com</a></p>
+        </div>
+        <p class="trademark">&copy; Travella inc. 2026 All Rights Reserved</p>
+    </footer>
+    <script src="index.js"></script>
+    <script src="account.js"></script>
+</body>
+
+</html>
