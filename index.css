@@ -17,6 +17,12 @@ body {
     background-color: var(--color-forestfloor);
 }
 
+p {
+    font-size: 1.4rem;
+    font-weight: 550;
+    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.9);
+}
+
 .home-img1,
 .home-img2,
 .home-img3 {
@@ -40,12 +46,6 @@ body {
     width: fit-content;
 }
 
-p {
-    font-size: 1.4rem;
-    font-weight: 550;
-    text-shadow: 1px 3.5px 7px rgba(0, 0, 0, 0.9);
-}
-
 .art1 span {
     display: block;
     margin-top: 10px;
@@ -60,10 +60,6 @@ p {
     text-shadow: 2px 6px 8px rgba(0, 0, 0, 0.8);
     transform: scale(1.05);
     cursor: default;
-}
-
-.home-end span:hover {
-    color: white;
 }
 
 .card-box {
@@ -112,7 +108,7 @@ p {
 
 .other-media {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 30px;
@@ -122,6 +118,9 @@ p {
 
 iframe {
     background-color: white;
+    width: 70%;
+    height: 500px;
+    border: 2px solid black;
 }
 
 .home-end {
@@ -141,12 +140,12 @@ iframe {
     margin-top: 10px;
     font-size: 2.4rem;
     font-weight: 700;
-    transition: all 0.3s, text-shadow 0.3s ease;
+    transition: all 0.3s ease;
     text-shadow: 2px 6px 10px rgba(0, 0, 0, 0.8);
 }
 
 .home-end a:hover {
-    cursor: default;
+    cursor: pointer;
     color: white;
     transform: scale(1.05);
     text-shadow: 2px 6px 8px rgba(0, 0, 0, 0.9);
