@@ -22,7 +22,7 @@ if (submit) {
     submit.onclick = function (e) {
         e.preventDefault();
         phoneError.style.display = 'none';
-        if (!name.value || !phone.value || !destination.value || !go.value || !returne.value ) {
+        if (!name.value || !phone.value || !destination.value || !go.value || !returne.value) {
             window.alert("Please Fill All Fields");
             return;
         }
@@ -52,6 +52,7 @@ if (submit) {
             window.alert("Success!");
             clear();
             showData();
+            scroll({ top: document.body.scrollHeight, behavior: 'smooth' });
         }
     }
 }
