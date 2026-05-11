@@ -16,6 +16,9 @@ bgSelector.addEventListener("change", function () {
     localStorage.setItem("userBackground", newImage);
 });
 
+
+// Theme selcetor code:
+// visit for more information: https://stackoverflow.com/questions/37801882/how-to-change-css-root-color-variables-in-javascript 
 const themes = {
     'classic': {
         '--color-almond': '#D6BD98',
