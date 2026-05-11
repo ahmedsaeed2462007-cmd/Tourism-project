@@ -215,13 +215,13 @@ video {
     }
 
     .card-box {
-        width: 70%;
+        width: fit-content;
         padding: 20px 10px;
         gap: 40px;
     }
 
     .card-box img {
-        max-width: 100%;
+        max-width: 168.2px;
         height: 250px;
     }
 
