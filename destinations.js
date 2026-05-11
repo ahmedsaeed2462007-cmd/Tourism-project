@@ -33,8 +33,5 @@ function goToProgram(typedValue) {
 
 
 function bookProgram(programName) {
-
-    var bookingUrl = "book-a-toor.html?destination=" + encodeURIComponent(programName);
-
-    window.location.href = bookingUrl;
+    window.location.href = "book-a-toor.html";
 }
