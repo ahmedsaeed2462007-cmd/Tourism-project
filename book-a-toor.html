@@ -34,7 +34,6 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="destinations.html">Destinations</a></li>
                         <li><a href="book-a-toor.html">Book A Tour</a></li>
-                        <!-- <li><a href="my-bookings.html">My Bookings</a></li> -->
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="contact_us.html">Customer Support</a></li>
                         <li><a href="about_us.html">About Us</a></li>
@@ -68,55 +67,55 @@
         </nav>
     </header>
     <img src="media/Istanbul City.jpg" alt="background_img" class="background_img" id="main-bg">
-    <div class="content">
-        <div class="h-form">
-            <h1>Discover the beauty of the world with us</h1>
-            <form>
-                <input required placeholder="Full Name" name="name" type="text" id="name">
-                <input required placeholder="Email Address" name="Email" type="email" id="email">
-                <div id="emailError" style="color: red;font-size: 20px;display: none;"></div>
-                <input required placeholder="Phone Number" name="Phone" type="tel" id="phone" maxlength="11">
-                <div id="phoneError" style="color: red; font-size: 20px; display: none;"></div>
-                <label for="destination">Destination</label>
-                <select id="destination">
-                    <option value="Cairo Classic Journey">Cairo Classic Journey</option>
-                    <option value="Kings of the Nile">Kings of the Nile</option>
-                    <option value="Red Sea Adventure">Red Sea Adventure</option>
-                    <option value="Istanbul Splendor">Istanbul Splendor</option>
-                    <option value="Cappadocia Adventure">Cappadocia Adventure</option>
-                    <option value="Turquoise Coast">Turquoise Coast</option>
-                    <option value="Cultural Escape">Cultural Escape</option>
-                    <option value="Andalusia Adventure">Andalusia Adventure</option>
-                    <option value="Costa del Sol">Costa del Sol</option>
-                </select>
-                <label for="go">Departure Dates</label>
-                <input id="go" name="Departure" required type="date">
-                <label for="return">Return Dates</label>
-                <input id="return" name="Return" required type="date">
-                <button id="submit">Book now</button>
-            </form>
-        </div>
-    </div>
-    <div class="table">
-        <div id="DELETEALL"></div>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Destination</th>
-                    <th>Go</th>
-                    <th>Return</th>
-                    <th>Update</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody id="tbody">
+    <main>
+        <section class="content">
+            <div class="h-form">
+                <h1>Discover the beauty of the world with us</h1>
+                <form>
+                    <input required placeholder="Full Name" name="name" type="text" id="name">
+                    <input required placeholder="Phone Number" name="Phone" type="tel" id="phone" maxlength="11">
+                    <div id="phoneError" style="color: red; font-size: 20px; display: none;"></div>
+                    <label for="destination">Destination</label>
+                    <select id="destination">
+                        <option value="Cairo Classic Journey">Cairo Classic Journey</option>
+                        <option value="Kings of the Nile">Kings of the Nile</option>
+                        <option value="Red Sea Adventure">Red Sea Adventure</option>
+                        <option value="Istanbul Splendor">Istanbul Splendor</option>
+                        <option value="Cappadocia Adventure">Cappadocia Adventure</option>
+                        <option value="Turquoise Coast">Turquoise Coast</option>
+                        <option value="Cultural Escape">Cultural Escape</option>
+                        <option value="Andalusia Adventure">Andalusia Adventure</option>
+                        <option value="Costa del Sol">Costa del Sol</option>
+                    </select>
+                    <label for="go">Departure Dates</label>
+                    <input id="go" name="Departure" required type="date">
+                    <label for="return">Return Dates</label>
+                    <input id="return" name="Return" required type="date">
+                    <button id="submit">Book now</button>
+                </form>
+            </div>
+        </section>
+        <section class="table">
+            <div id="DELETEALL"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Destination</th>
+                        <th>Go</th>
+                        <th>Return</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
 
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </section>
+    </main>
     <footer>
         <div class="social-icons">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
