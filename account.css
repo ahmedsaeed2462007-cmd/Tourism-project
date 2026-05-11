@@ -1,6 +1,17 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
+    flex: 1;
     padding: 20px;
-    height: auto;
     width: 100%;
 }
 
@@ -12,13 +23,13 @@ main {
     color: var(--color-deepwood);
     max-width: 1200;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    margin-bottom: 50px;
+    justify-content: center;
 }
 
-.all h1{
+.all h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .per-info {
@@ -27,6 +38,7 @@ main {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     width: 100%;
+    text-align: left;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -39,7 +51,7 @@ main {
     margin-bottom: 25px;
 }
 
-.logon{
+.logon {
     text-align: center;
 }
 
@@ -53,7 +65,14 @@ main {
     gap: 30px;
 }
 
+.left p {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .details p {
+    text-align: left;
     margin: 12px 0;
     font-size: 1.1rem;
     color: var(--color-green);
@@ -62,21 +81,21 @@ main {
 .details strong {
     display: inline-block;
     width: 100px;
-    color: var(--color-eclipse);
+    color: var(--color-matchabrew);
 }
 
 @media(max-width:700px) {
     .left {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
     }
 }
 
-@media(max-width:426px){
-    .logon i{
+@media(max-width:426px) {
+    .logon i {
         font-size: 4rem;
     }
+
     .details {
         font-size: 15px;
     }

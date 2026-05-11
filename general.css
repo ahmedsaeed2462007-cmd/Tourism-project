@@ -63,16 +63,11 @@ nav {
     color: white;
 }
 
-.navbar audio {
-    margin: 10px;
-    width: 100px;
-}
-
 .visible_links {
     display: flex;
     margin-left: auto;
     align-items: center;
-    margin-right: 25px;
+    margin-right: 20px;
     gap: 10px;
 }
 
@@ -118,8 +113,6 @@ nav {
     cursor: pointer;
     padding: 16px;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .dropbtn:hover {
@@ -131,13 +124,7 @@ nav {
 }
 
 .dropdown_content {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
     position: absolute;
-    top: 100%;
-    left: 0%;
     transform: translateX(-6%);
     min-width: 250px;
     padding: 15px 0px;
@@ -150,9 +137,12 @@ nav {
     transition: all 0.3s ease;
 }
 
+.dropdown:hover .dropdown_content {
+    opacity: 1;
+    visibility: visible;
+}
+
 .dropdown_content a {
-    padding: 12px 16px;
-    text-decoration: none;
     text-align: center;
     display: block;
     width: 100%;
@@ -161,11 +151,6 @@ nav {
 
 .dropdown_content li {
     padding: 0px 10px;
-}
-
-.dropdown:hover .dropdown_content {
-    opacity: 1;
-    visibility: visible;
 }
 
 footer {
