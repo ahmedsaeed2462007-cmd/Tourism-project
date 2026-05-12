@@ -25,11 +25,18 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.all h1 {
-    text-align: center;
+.welcome {
+    display: block;
+    width: fit-content;
+    padding: 20px;
     margin-bottom: 20px;
+    color: var(--color-matchabrew);
+    background-color: var(--color-eclipse);
+    border: 3px solid var(--color-almond);
+    border-radius: 10px;
 }
 
 .per-info {
