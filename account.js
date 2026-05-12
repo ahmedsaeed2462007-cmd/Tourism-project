@@ -1,11 +1,11 @@
 window.onload = function () {
-    // 1. جلب البيانات من localStorage
+
     let name = localStorage.getItem('userName');
     let email = localStorage.getItem('userEmail');
     let country = localStorage.getItem('userCountry');
-    let pass = localStorage.getItem('userPass'); // جلب الباسورد
+    let pass = localStorage.getItem('userPass');
 
-    // 2. وضع البيانات في الـ HTML باستخدام الـ IDs الجديدة
+
     if (name) {
         document.getElementById('acc-name').innerText = name;
         document.getElementById('welcome-msg').innerText = "Welcome, " + name + "!";

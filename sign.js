@@ -7,7 +7,7 @@ submit.onclick = function (e) {
     emailError.style.display = 'none';
     passError.style.display = 'none';
     let check = true;
-    //trim()=>لاخفاء الفراغات البيضاء من بداية ونهاية النص
+
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email.value.trim() === "") {
         emailError.textContent = "Email is required";
@@ -33,27 +33,27 @@ submit.onclick = function (e) {
         alert("The operation was completed successfully");
     }
 }
-//لنقل البيانات للاكونت
-document.getElementById('submit').addEventListener('click', function(e) {
-    e.preventDefault(); // عشان الصفحة متعملش Refresh
 
-    // مسك البيانات من الـ Inputs
+document.getElementById('submit').addEventListener('click', function (e) {
+    e.preventDefault();
+
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('pass').value;
     const country = document.getElementById('CN').value;
 
-    // التأكد إن الخانات مش فاضية (Validation بسيط)
-    if(name && email && password && country) {
-        
-        // حفظ البيانات في localStorage
+
+    if (name && email && password && country) {
+
+
         localStorage.setItem('userName', name);
         localStorage.setItem('userEmail', email);
         localStorage.setItem('userPass', password);
         localStorage.setItem('userCountry', country);
 
-        // التحويل لصفحة الاكونت
-        window.location.href = "account.html"; 
+
+        window.location.href = "account.html";
     } else {
         alert("Please fill all fields!");
     }
