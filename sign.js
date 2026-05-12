@@ -7,7 +7,6 @@ submit.onclick = function (e) {
     emailError.style.display = 'none';
     passError.style.display = 'none';
     let check = true;
-
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email.value.trim() === "") {
         emailError.textContent = "Email is required";
